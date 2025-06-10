@@ -1,0 +1,133 @@
+.project {
+    padding: 20rem 0 4rem;
+
+    &__title {
+        h1 {
+            font-size: 6.4rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            background-color: #000;
+            padding: 0 2rem;
+            display: inline-block;
+            border-radius: 1.6rem;
+
+            @media #{$xs} {
+                font-size: 3.2rem;
+            }
+        }
+
+        p {
+            color: #B9B9B9;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__list {
+        margin: 8rem 0 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    &__box {
+        background-color: #2B2B2B;
+        border-radius: 3rem;
+        padding: 5rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    &__count {
+        flex: 1;
+
+        span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+        }
+    }
+
+    &__content {
+        flex: 1.5;
+
+        span {
+            color: #B9B9B9;
+            font-size: 1.2rem;
+            font-weight: 400;
+            display: block;
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin: 0 0 4rem;
+            color: #fff;
+        }
+
+        p {
+            color: #B9B9B9;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__link {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: end;
+        width: 100%;
+        text-align: end;
+        justify-content: end;
+    }
+
+    &__arrow {
+        width: 5.8rem;
+        height: 5.8rem;
+        border: 0.1rem solid #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__flex {
+        h2 {
+            font-size: 6.4rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+
+            @media #{$xs} {
+                font-size: 3.2rem;
+            }
+
+            span {
+                background-color: #000;
+                padding: 0 2rem;
+                display: inline-block;
+                border-radius: 1.6rem;
+            }
+        }
+    }
+}

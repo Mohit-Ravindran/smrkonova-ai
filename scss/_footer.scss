@@ -1,0 +1,134 @@
+.footer {
+    padding: 6rem 0;
+
+    &__one {
+        h2 {
+            font-size: 6.4rem;
+            font-weight: 700;
+            margin: 0 0 5rem;
+            color: #fff;
+
+            @media #{$xs} {
+                font-size: 3.2rem;
+            }
+        }
+
+        .input-group {
+            height: 7rem;
+
+            input {
+                padding: 0.8rem 1.6rem;
+                color: #000;
+                font-size: 1.6rem;
+                border: none !important;
+
+                font-weight: 400;
+            }
+        }
+
+        .input-group-text {
+            background-color: #fff;
+            border: none !important;
+
+            button {
+                all: unset !important;
+                cursor: pointer !important;
+            }
+        }
+    }
+
+    &__row {
+        padding: 0 0 8rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #fff;
+            display: block;
+        }
+    }
+
+    &__end {
+        p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin: 0 0 4rem;
+            color: #fff;
+        }
+    }
+
+    &__call {
+        a {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #fff;
+            display: block;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 4rem 0 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: #fff;
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    &__copyright {
+        border-top: 0.55px solid #FFFFFF26;
+        padding: 3.8rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media #{$xs} {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #fff;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        a {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 500;
+            display: block;
+        }
+    }
+
+}

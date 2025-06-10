@@ -1,0 +1,194 @@
+.contact {
+    padding: 10rem 0;
+
+    &__title {
+        margin: 0 0 7rem;
+
+        h2 {
+            font-size: 6.4rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+
+            @media #{$xs} {
+                font-size: 3.2rem;
+            }
+
+            span {
+                background-color: #000;
+                padding: 0 2rem;
+                display: inline-block;
+                border-radius: 1.6rem;
+            }
+        }
+    }
+
+    &__box {
+        background-color: #2B2B2B;
+        padding: 3.4rem 4rem;
+        border-radius: 7.4rem;
+        background-image: url(../assets/img/contact/bg.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__form-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 0.73px solid #FFFFFF33;
+        padding: 0 0 2.8rem;
+
+        h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+        }
+
+        span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+
+    &__form {
+        padding: 8rem 0 5rem;
+        border-bottom: 0.73px solid #FFFFFF33;
+
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 0 0 2rem;
+            color: #fff;
+        }
+
+        input {
+            background-color: #0E0C15;
+            border-radius: 7rem;
+            height: 4.8rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1rem;
+
+            &:focus {
+                background-color: #0E0C15;
+            }
+        }
+
+        textarea {
+            background: #805AF580;
+            border-radius: 2rem;
+            font-size: 2.4rem;
+            font-weight: 400;
+            border: none;
+            padding: 2rem;
+            color: #fff !important;
+
+            &:focus {
+                background-color: #805AF580;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 7rem 0 0;
+    }
+
+    &__end {
+        text-align: center;
+
+        h4 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 0 0 2.4rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: #fff;
+            margin: 0 0 2.4rem;
+        }
+
+        button {
+            background-color: #FFB800 !important;
+            border-radius: 10rem;
+            padding: 1rem 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4.4rem;
+            font-size: 1.6rem;
+            color: #000;
+            font-weight: 500;
+            border: none;
+        }
+    }
+
+    &__end-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.contact-step {
+    display: none;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 1.6rem;
+    cursor: pointer;
+
+    img {
+        width: 5.4rem;
+        height: 5.4rem;
+    }
+
+    span {
+        display: block;
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #000;
+    }
+}
+
+.radio-group input[type="radio"]:checked+label {
+    background-color: #BCA921;
+
+    span {
+        color: #fff;
+    }
+}
