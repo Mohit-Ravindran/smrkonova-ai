@@ -925,9 +925,6 @@
   background-color: #2B2B2B;
   padding: 3.4rem 4rem;
   border-radius: 7.4rem;
-  background-image: url(../assets/img/contact/bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .contact__form-title {
   display: -webkit-box;
@@ -1107,6 +1104,12 @@
 }
 .radio-group input[type=radio]:checked + label span {
   color: #fff;
+}
+
+#contactForm {
+  background-image: url(../assets/img/contact/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .service {
@@ -1471,6 +1474,66 @@
   padding: 0 2rem;
   display: inline-block;
   border-radius: 1.6rem;
+}
+.project__list ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8rem;
+}
+.project__list ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 4rem;
+}
+.project__count {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+.project__contents h3 {
+  font-size: 3.2rem;
+  margin: 0 0 3rem;
+  font-weight: 500;
+  color: #fff;
+}
+.project__contents p {
+  color: #B9B9B9;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 4rem;
+}
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 0 0 4rem;
+}
+.project__card h4 {
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+}
+.project__card span {
+  color: #B9B9B9;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+.project__large-img {
+  margin: 2rem 0 0;
 }
 
 .details {
@@ -1862,4 +1925,9 @@ img {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+.mySwiper,
+.reviewSwiper {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

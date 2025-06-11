@@ -30,9 +30,7 @@
         background-color: #2B2B2B;
         padding: 3.4rem 4rem;
         border-radius: 7.4rem;
-        background-image: url(../assets/img/contact/bg.svg);
-        background-repeat: no-repeat;
-        background-position: center;
+
     }
 
     &__form-title {
@@ -191,4 +189,10 @@
     span {
         color: #fff;
     }
+}
+
+#contactForm {
+    background-image: url(../assets/img/contact/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
