@@ -574,23 +574,29 @@
   color: rgba(255, 255, 255, 0.6980392157);
   margin: 0;
 }
+.integration__list {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
 .integration__list ul {
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 2rem;
+  /* Make the ul as wide as its content */
 }
 .integration__list ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   list-style-type: none;
   background-color: #fff;
   padding: 1rem 2rem;
@@ -964,6 +970,63 @@
   right: 4rem;
 }
 
+/* Right to Left Animation */
+.slider-rtl ul {
+  -webkit-animation: slideRtl 50s linear infinite;
+          animation: slideRtl 50s linear infinite;
+}
+
+/* Left to Right Animation */
+.slider-ltr ul {
+  -webkit-animation: slideLtr 50s linear infinite;
+          animation: slideLtr 50s linear infinite;
+}
+
+@-webkit-keyframes slideRtl {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* Move left by half of the content width */
+  }
+}
+
+@keyframes slideRtl {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* Move left by half of the content width */
+  }
+}
+@-webkit-keyframes slideLtr {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* Start from the left */
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideLtr {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* Start from the left */
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .contact {
   padding: 10rem 0;
 }

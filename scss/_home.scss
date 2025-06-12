@@ -396,16 +396,22 @@
   }
 
   &__list {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+
     ul {
+      display: flex;
+      list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      justify-content: center;
+      width: max-content;
+      gap: 2rem;
+      /* Make the ul as wide as its content */
 
       li {
+        flex: 0 0 auto;
         list-style-type: none;
         background-color: #fff;
         padding: 1rem 2rem;
@@ -767,5 +773,37 @@
     position: absolute;
     bottom: 0;
     right: 4rem;
+  }
+}
+
+/* Right to Left Animation */
+.slider-rtl ul {
+  animation: slideRtl 50s linear infinite;
+}
+
+/* Left to Right Animation */
+.slider-ltr ul {
+  animation: slideLtr 50s linear infinite;
+}
+
+@keyframes slideRtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* Move left by half of the content width */
+  }
+}
+
+@keyframes slideLtr {
+  0% {
+    transform: translateX(-50%);
+    /* Start from the left */
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
