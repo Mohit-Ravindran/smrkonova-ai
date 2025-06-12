@@ -2,6 +2,10 @@
     padding: 6rem 0;
 
     &__one {
+        @media #{$xs} {
+            margin: 0 0 3rem;
+        }
+
         h2 {
             font-size: 6.4rem;
             font-weight: 700;
@@ -10,6 +14,7 @@
 
             @media #{$xs} {
                 font-size: 3.2rem;
+                margin: 0 0 2rem;
             }
         }
 
@@ -39,12 +44,21 @@
 
     &__row {
         padding: 0 0 8rem;
+
+        @media #{$xs} {
+            padding: 0 0 4rem;
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
+
+        @media #{$xs} {
+            margin: 0 0 4rem;
+            gap: 1rem;
+        }
 
         a {
             font-size: 1.6rem;
@@ -60,6 +74,10 @@
             font-weight: 500;
             margin: 0 0 4rem;
             color: #fff;
+
+            @media #{$xs} {
+                margin: 0 0 2rem;
+            }
         }
     }
 

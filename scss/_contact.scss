@@ -1,6 +1,10 @@
 .contact {
     padding: 10rem 0;
 
+    @media #{$xs} {
+        padding: 6rem 0;
+    }
+
     &__title {
         margin: 0 0 7rem;
 
@@ -31,6 +35,11 @@
         padding: 3.4rem 4rem;
         border-radius: 7.4rem;
 
+        @media #{$xs} {
+            border-radius: 3rem;
+            padding: 3.5rem 2rem;
+        }
+
     }
 
     &__form-title {
@@ -45,6 +54,10 @@
             font-weight: 700;
             margin: 0;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 2rem;
+            }
         }
 
         span {
@@ -58,6 +71,10 @@
     &__form {
         padding: 8rem 0 5rem;
         border-bottom: 0.73px solid #FFFFFF33;
+
+        @media #{$xs} {
+            padding: 3rem 0;
+        }
 
         h4 {
             font-size: 1.6rem;
@@ -107,6 +124,10 @@
         gap: 3rem;
         justify-content: flex-end;
         margin: 7rem 0 0;
+
+        @media #{$xs} {
+            margin: 3rem 0 0;
+        }
     }
 
     &__end {
@@ -117,6 +138,10 @@
             font-weight: 700;
             margin: 0 0 2.4rem;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 2.4rem;
+            }
         }
 
         p {
@@ -199,4 +224,5 @@
     background-image: url(../assets/img/contact/bg.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
