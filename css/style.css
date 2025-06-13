@@ -219,6 +219,11 @@
     font-size: 3.6rem;
   }
 }
+@media (max-width: 767px) {
+  .banner__content h1 img {
+    width: 3rem;
+  }
+}
 .banner__content h1 span {
   background-color: #000;
   padding: 0 2rem;
@@ -233,6 +238,11 @@
   font-weight: 400;
   margin: 4rem 0 2rem;
   color: #b9b9b9;
+}
+@media (max-width: 767px) {
+  .banner__content p {
+    font-size: 1.6rem;
+  }
 }
 .banner__content p span {
   color: #fff;
@@ -288,7 +298,7 @@
 }
 @media (max-width: 767px) {
   .work__title h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     margin: 0 0 2rem;
   }
 }
@@ -298,6 +308,11 @@
   font-weight: 400;
   color: #b9b9b9;
   margin: 0;
+}
+@media (max-width: 767px) {
+  .work__title p {
+    font-size: 1.4rem;
+  }
 }
 .work__title p span {
   font-weight: 700;
@@ -321,8 +336,23 @@
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 767px) {
+  .work__card p {
+    font-size: 1.4rem;
+  }
+}
 .work__img {
   margin: 0 0 4rem;
+}
+@media (max-width: 767px) {
+  .work__img {
+    margin: 0 0 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .work__img img {
+    width: 4.8rem;
+  }
 }
 .work__arrow {
   display: -webkit-box;
@@ -336,6 +366,17 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 4rem 0;
+}
+@media (max-width: 767px) {
+  .work__arrow {
+    gap: 0.6rem;
+    margin: 2rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .work__arrow img {
+    width: 3.2rem;
+  }
 }
 .work__arrow div {
   cursor: pointer;
@@ -362,7 +403,7 @@
 }
 @media (max-width: 767px) {
   .we__left h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }
 .we__left p {
@@ -371,10 +412,20 @@
   font-weight: 400;
   margin: 0 0 2rem;
 }
+@media (max-width: 767px) {
+  .we__left p {
+    font-size: 1.4rem;
+  }
+}
 .we__left span {
   font-size: 1.6rem;
   font-weight: 400;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .we__left span {
+    font-size: 1.4rem;
+  }
 }
 .we__tab .nav-pills {
   background-color: #010001;
@@ -480,7 +531,7 @@
 }
 @media (max-width: 767px) {
   .tools__title h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }
 .tools__tab .nav-pills {
@@ -544,7 +595,7 @@
 }
 @media (max-width: 767px) {
   .tools__left h3 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 .tools__left ul {
@@ -562,6 +613,7 @@
 @media (max-width: 767px) {
   .tools__left ul {
     margin: 2rem 0;
+    gap: 0.6rem;
   }
 }
 .tools__left ul li {
@@ -574,11 +626,21 @@
           align-items: center;
   gap: 1rem;
 }
+@media (max-width: 767px) {
+  .tools__left ul li {
+    gap: 0.6rem;
+  }
+}
 .tools__left ul li p {
   margin: 0;
   color: rgba(255, 255, 255, 0.6980392157);
   font-size: 1.6rem;
   font-weight: 400;
+}
+@media (max-width: 767px) {
+  .tools__left ul li p {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 767px) {
   .tools__img {
@@ -623,7 +685,7 @@
 }
 @media (max-width: 767px) {
   .integration__title h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }
 .integration__title p {
@@ -631,6 +693,11 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 0.6980392157);
   margin: 0;
+}
+@media (max-width: 767px) {
+  .integration__title p {
+    font-size: 1.4rem;
+  }
 }
 .integration__list {
   overflow: hidden;
@@ -701,12 +768,18 @@
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 767px) {
+  .integration__card p {
+    font-size: 1.4rem;
+  }
+}
 .integration__bg img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
   width: 100%;
   z-index: 1;
   -webkit-transition: 0.4s;
@@ -885,6 +958,7 @@
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin: 0 0 2rem;
   }
 }
 .review__title h2 {
@@ -899,7 +973,7 @@
 }
 @media (max-width: 767px) {
   .review__title h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }
 .review__arrow {
@@ -910,6 +984,11 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1.6rem;
+}
+@media (max-width: 767px) {
+  .review__arrow img {
+    width: 3.2rem;
+  }
 }
 .review__arrow div {
   cursor: pointer;

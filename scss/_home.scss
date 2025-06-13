@@ -20,6 +20,12 @@
         font-size: 3.6rem;
       }
 
+      img {
+        @media #{$xs} {
+          width: 3rem;
+        }
+      }
+
       span {
         background-color: #000;
         padding: 0 2rem;
@@ -37,6 +43,10 @@
       font-weight: 400;
       margin: 4rem 0 2rem;
       color: $para;
+
+      @media #{$xs} {
+        font-size: 1.6rem;
+      }
 
       span {
         color: $white;
@@ -93,7 +103,7 @@
       border-radius: 1.6rem;
 
       @media #{$xs} {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         margin: 0 0 2rem;
       }
 
@@ -105,6 +115,10 @@
       font-weight: 400;
       color: $para;
       margin: 0;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
 
       span {
         font-weight: 700;
@@ -132,11 +146,25 @@
       font-size: 1.6rem;
       font-weight: 400;
       margin: 0;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
     }
   }
 
   &__img {
     margin: 0 0 4rem;
+
+    @media #{$xs} {
+      margin: 0 0 2rem;
+    }
+
+    img {
+      @media #{$xs} {
+        width: 4.8rem;
+      }
+    }
   }
 
   &__arrow {
@@ -145,6 +173,17 @@
     gap: 1.6rem;
     justify-content: flex-end;
     margin: 4rem 0;
+
+    @media #{$xs} {
+      gap: 0.6rem;
+      margin: 2rem 0;
+    }
+
+    img {
+      @media #{$xs} {
+        width: 3.2rem;
+      }
+    }
 
     div {
       cursor: pointer;
@@ -172,7 +211,7 @@
       border-radius: 1.6rem;
 
       @media #{$xs} {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
     }
 
@@ -181,12 +220,20 @@
       font-size: 1.6rem;
       font-weight: 400;
       margin: 0 0 2rem;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
     }
 
     span {
       font-size: 1.6rem;
       font-weight: 400;
       color: #fff;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -292,7 +339,7 @@
       border-radius: 1.6rem;
 
       @media #{$xs} {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
     }
   }
@@ -355,7 +402,7 @@
       color: #fff;
 
       @media #{$xs} {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
       }
     }
 
@@ -368,6 +415,7 @@
 
       @media #{$xs} {
         margin: 2rem 0;
+        gap: 0.6rem;
       }
 
       li {
@@ -376,11 +424,19 @@
         align-items: center;
         gap: 1rem;
 
+        @media #{$xs} {
+          gap: 0.6rem;
+        }
+
         p {
           margin: 0;
           color: #FFFFFFB2;
           font-size: 1.6rem;
           font-weight: 400;
+
+          @media #{$xs} {
+            font-size: 1.4rem;
+          }
 
         }
       }
@@ -430,7 +486,7 @@
       border-radius: 1.6rem;
 
       @media #{$xs} {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
     }
 
@@ -439,6 +495,10 @@
       font-weight: 500;
       color: #FFFFFFB2;
       margin: 0;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
 
     }
   }
@@ -505,17 +565,23 @@
       font-size: 1.6rem;
       font-weight: 400;
       margin: 0;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
     }
   }
 
   &__bg {
+
+
     img {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      // height: 100%;
+      height: 100%;
       width: 100%;
       z-index: 1;
       transition: 0.4s;
@@ -673,6 +739,7 @@
       flex-direction: column;
       gap: 2rem;
       align-items: baseline;
+      margin: 0 0 2rem;
     }
 
     h2 {
@@ -686,7 +753,7 @@
       border-radius: 1.6rem;
 
       @media #{$xs} {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
     }
   }
@@ -695,6 +762,12 @@
     display: flex;
     align-items: center;
     gap: 1.6rem;
+
+    img {
+      @media #{$xs} {
+        width: 3.2rem;
+      }
+    }
 
     div {
       cursor: pointer;
