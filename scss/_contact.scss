@@ -1,8 +1,8 @@
 .contact {
-    padding: 10rem 0;
+    padding: 10rem 0 0;
 
     @media #{$xs} {
-        padding: 6rem 0;
+        padding: 6rem 0 0;
     }
 
     @media #{$md} {
@@ -39,15 +39,37 @@
     }
 
     &__box {
-        background-color: #2B2B2B;
+        // background-color: #2B2B2B;
         padding: 3.4rem 4rem;
         border-radius: 7.4rem;
+        position: relative;
 
         @media #{$xs} {
             border-radius: 3rem;
             padding: 3.5rem 2rem;
         }
 
+    }
+
+    &__steps {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__bg {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            transition: 0.4s;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__form-title {
@@ -229,8 +251,8 @@
 }
 
 #contactForm {
-    background-image: url(../assets/img/contact/bg.svg);
+    background-image: url(../assets/img/contact/bg.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: initial;
 }

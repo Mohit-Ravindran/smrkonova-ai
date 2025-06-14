@@ -1173,11 +1173,28 @@
     padding: 6rem 0;
   }
 }
+.chat__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  visibility: visible;
+}
+.chat__contents {
+  position: relative;
+  z-index: 2;
+}
 .chat__box {
-  background-color: #2B2B2B;
   position: relative;
   border-radius: 7rem;
-  padding: 6rem 4rem;
+  padding: 14rem 4rem 6rem;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -1366,11 +1383,11 @@
 }
 
 .contact {
-  padding: 10rem 0;
+  padding: 10rem 0 0;
 }
 @media (max-width: 767px) {
   .contact {
-    padding: 6rem 0;
+    padding: 6rem 0 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1414,15 +1431,33 @@
   border-radius: 1.6rem;
 }
 .contact__box {
-  background-color: #2B2B2B;
   padding: 3.4rem 4rem;
   border-radius: 7.4rem;
+  position: relative;
 }
 @media (max-width: 767px) {
   .contact__box {
     border-radius: 3rem;
     padding: 3.5rem 2rem;
   }
+}
+.contact__steps {
+  position: relative;
+  z-index: 2;
+}
+.contact__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  visibility: visible;
 }
 .contact__form-title {
   display: -webkit-box;
@@ -1640,10 +1675,10 @@
 }
 
 #contactForm {
-  background-image: url(../assets/img/contact/bg.svg);
+  background-image: url(../assets/img/contact/bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: initial;
 }
 
 .service {

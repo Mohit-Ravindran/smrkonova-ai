@@ -931,11 +931,32 @@
     padding: 6rem 0;
   }
 
+  &__bg {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      transition: 0.4s;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__contents {
+    position: relative;
+    z-index: 2;
+  }
+
   &__box {
-    background-color: #2B2B2B;
+    // background-color: #2B2B2B;
     position: relative;
     border-radius: 7rem;
-    padding: 6rem 4rem;
+    padding: 14rem 4rem 6rem;
     text-align: center;
 
     @media #{$xs} {
