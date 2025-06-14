@@ -343,6 +343,21 @@
       @media #{$xs} {
         font-size: 2.8rem;
       }
+
+      @media #{$md} {
+        font-size: 4.2rem;
+      }
+    }
+
+    p {
+      color: #B9B9B9;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 2rem 0 0;
+
+      @media #{$xs} {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -351,12 +366,9 @@
       justify-content: space-between;
       gap: 3rem;
       margin: 0 0 4rem;
-
-      @media #{$xs} {
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        overflow-x: auto;
-      }
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow-x: auto;
 
       .nav-item {
         .nav-link {
@@ -405,6 +417,10 @@
 
       @media #{$xs} {
         font-size: 2.4rem;
+      }
+
+      @media #{$md} {
+        font-size: 3.2rem;
       }
     }
 
@@ -893,10 +909,18 @@
         @media #{$xs} {
           width: 3rem;
         }
+
+        @media #{$md} {
+          width: 4rem;
+        }
       }
 
       @media #{$xs} {
         font-size: 2.8rem;
+      }
+
+      @media #{$md} {
+        font-size: 3.2rem;
       }
     }
 
@@ -933,6 +957,16 @@
     bottom: 2rem;
     left: 4rem;
 
+    @media #{$md} {
+      left: 0;
+    }
+
+    img {
+      @media #{$md} {
+        width: 50%;
+      }
+    }
+
     @media #{$xs} {
       display: none;
     }
@@ -942,6 +976,17 @@
     position: absolute;
     bottom: 0;
     right: 4rem;
+
+    @media #{$md} {
+
+      right: 0;
+    }
+
+    img {
+      @media #{$md} {
+        width: 50%;
+      }
+    }
 
     @media #{$xs} {
       display: none;
