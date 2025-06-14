@@ -1,7 +1,42 @@
-// Load header
+function setActiveLink() {
+    // Get current page path
+    const path = window.location.pathname;
+    const currentPage = path.split('/').pop() || 'index.html';
+
+    // Map page URLs to data-page values
+    const pageMap = {
+        'index.html': 'home',
+        '': 'home',
+        'service.html': 'service',
+        'about.html': 'about',
+        'blog.html': 'blog',
+        'contact-us.html': 'contact',
+        'ai.html': 'ai'
+    };
+
+    // Get the current page identifier
+    const pageId = pageMap[currentPage] || '';
+
+    if (pageId) {
+        // Remove active class from all links first
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active class to matching links
+        const activeLinks = document.querySelectorAll(`[data-page="${pageId}"]`);
+        activeLinks.forEach(link => link.classList.add('active'));
+    }
+}
+
+// Load header and then set active link
 fetch('./shared/header.html')
     .then(res => res.text())
-    .then(data => document.getElementById('header').innerHTML = data);
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+        setActiveLink(); // Call this after header is loaded
+    })
+    .catch(error => console.error('Error loading header:', error));
 
 
 // Load review
