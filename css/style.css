@@ -1051,16 +1051,24 @@
   cursor: pointer;
 }
 .review__card {
-  background-color: #2B2B2B;
   position: relative;
   z-index: 2;
   border-radius: 2.4rem;
   padding: 2.4rem 6rem 2.4rem 2.4rem;
-  aspect-ratio: 365/206;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  clip-path: path("M0 29.9729V176.314C0 192.479 13.1039 205.583 29.2683 205.583H336.585C352.75 205.583 365.854 192.479 365.854 176.314V66.6437C365.854 50.4792 352.75 37.3754 336.585 37.3754H184.533C178.716 37.3754 173.032 35.6421 168.204 32.3969L128.467 5.68305C123.639 2.43782 117.954 0.70459 112.138 0.70459H29.2683C13.1039 0.70459 0 13.8085 0 29.9729Z");
-  -webkit-clip-path: path("M0 29.9729V176.314C0 192.479 13.1039 205.583 29.2683 205.583H336.585C352.75 205.583 365.854 192.479 365.854 176.314V66.6437C365.854 50.4792 352.75 37.3754 336.585 37.3754H184.533C178.716 37.3754 173.032 35.6421 168.204 32.3969L128.467 5.68305C123.639 2.43782 117.954 0.70459 112.138 0.70459H29.2683C13.1039 0.70459 0 13.8085 0 29.9729Z");
+}
+.review__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  visibility: visible;
 }
 .review__star {
   display: -webkit-box;
@@ -1117,6 +1125,44 @@
   transition: 0.4s;
   opacity: 1;
   visibility: visible;
+}
+.review__star-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 8rem 0 4rem;
+}
+.review__star-content p {
+  margin: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.review__logo-list ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.review__logo-list ul li {
+  list-style-type: none;
 }
 
 .chat {
