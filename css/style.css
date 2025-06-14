@@ -2144,6 +2144,77 @@
   margin: 10rem 0 0;
 }
 
+.policy {
+  padding: 20rem 0 4rem;
+}
+.policy h1 {
+  color: #fff;
+  font-size: 4.8rem;
+  margin: 0 0 3rem;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .policy h1 {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
+.policy h4 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .policy h4 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+.policy p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 2rem;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .policy p {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+.policy h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .policy h5 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+.policy ul {
+  margin: 0;
+  padding: 0 0 0 3rem;
+}
+.policy ul li {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .policy ul li {
+    font-size: 1.8rem;
+  }
+}
+.policy a {
+  color: #0073ff;
+  font-weight: 600;
+}
+
 .map {
   padding: 20rem 0 10rem;
 }
