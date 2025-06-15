@@ -1,6 +1,10 @@
 .map {
     padding: 20rem 0 10rem;
 
+    @media #{$xs} {
+        padding: 14rem 0 4rem;
+    }
+
     &__title {
         text-align: center;
 
@@ -22,8 +26,18 @@
 
     }
 
+    &__img {
+        iframe {
+            width: 100%;
+        }
+    }
+
     &__list {
         padding: 10rem 0 0;
+
+        @media #{$xs} {
+            padding: 6rem 0 0;
+        }
     }
 
     &__grid {
@@ -31,6 +45,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 4rem 0 0;
+        }
     }
 
     &__card {
@@ -41,6 +60,10 @@
             font-weight: 500;
             margin: 2rem 0;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
         }
 
         a {

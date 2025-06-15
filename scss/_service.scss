@@ -198,6 +198,7 @@
 
     @media #{$xs} {
         padding: 6rem 0;
+        margin: 0;
     }
 
     &__title {
@@ -221,6 +222,10 @@
             }
 
             @media #{$md} {
+                font-size: 4.2rem;
+            }
+
+            @media #{$lg} {
                 font-size: 4.2rem;
             }
 

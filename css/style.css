@@ -1887,6 +1887,7 @@
 @media (max-width: 767px) {
   .voice {
     padding: 6rem 0;
+    margin: 0;
   }
 }
 .voice__title {
@@ -1919,6 +1920,11 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .voice__title h2 {
+    font-size: 4.2rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .voice__title h2 {
     font-size: 4.2rem;
   }
@@ -1970,6 +1976,11 @@
 .about {
   padding: 20rem 0 0;
 }
+@media (max-width: 767px) {
+  .about {
+    padding: 14rem 0 0;
+  }
+}
 .about__title h2 {
   font-size: 6.4rem;
   font-weight: 700;
@@ -1989,6 +2000,17 @@
 @media (max-width: 767px) {
   .about__title h2 {
     font-size: 3.2rem;
+    margin: 0 0 2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about__title h2 {
+    font-size: 4.2rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about__title h2 {
+    font-size: 4.2rem;
   }
 }
 .about__title h2 span {
@@ -2016,13 +2038,41 @@
   color: #fff;
   border-bottom: 0.83px solid rgba(255, 255, 255, 0.1490196078);
 }
+.about__accordion .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media (max-width: 767px) {
+  .about__accordion .accordion-button {
+    font-size: 1.8rem;
+  }
+}
 .about__accordion .accordion-body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .about__accordion .accordion-body {
+    font-size: 1.4rem;
+  }
+}
+.about__accordion .accordion-button::after {
+  background-image: url(../assets/img/icons/plus.svg);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: unset;
+}
+.about__accordion .accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/img/icons/minus.svg);
+}
 .about__row {
   margin: 10rem 0 0;
+}
+@media (max-width: 767px) {
+  .about__row {
+    margin: 4rem 0 0;
+  }
 }
 
 .project {
@@ -2240,6 +2290,11 @@
 .details {
   padding: 20rem 0 0;
 }
+@media (max-width: 767px) {
+  .details {
+    padding: 14rem 0 0;
+  }
+}
 .details__content {
   margin: 0 0 8rem;
 }
@@ -2265,6 +2320,11 @@
   margin: 0 0 3.2rem;
   font-weight: 500;
   color: #B9B9B9;
+}
+@media (max-width: 767px) {
+  .details__content p {
+    font-size: 1.4rem;
+  }
 }
 .details__content ul {
   padding: 0;
@@ -2292,6 +2352,11 @@
   font-size: 2.4rem;
   font-weight: 700;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .details__content ul li span {
+    font-size: 1.4rem;
+  }
 }
 .details__banner-img {
   margin: 4rem 0 0;
@@ -2370,10 +2435,33 @@
   color: #fff;
   border-bottom: 0.83px solid rgba(255, 255, 255, 0.1490196078);
 }
+.details__accordion .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media (max-width: 767px) {
+  .details__accordion .accordion-button {
+    font-size: 1.8rem;
+  }
+}
 .details__accordion .accordion-body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .details__accordion .accordion-body {
+    font-size: 1.4rem;
+  }
+}
+.details__accordion .accordion-button::after {
+  background-image: url(../assets/img/icons/plus.svg);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: unset;
+}
+.details__accordion .accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/img/icons/minus.svg);
 }
 
 .ai__banner {
@@ -2748,6 +2836,11 @@
 .map {
   padding: 20rem 0 10rem;
 }
+@media (max-width: 767px) {
+  .map {
+    padding: 14rem 0 4rem;
+  }
+}
 .map__title {
   text-align: center;
 }
@@ -2766,14 +2859,28 @@
     font-size: 3.2rem;
   }
 }
+.map__img iframe {
+  width: 100%;
+}
 .map__list {
   padding: 10rem 0 0;
+}
+@media (max-width: 767px) {
+  .map__list {
+    padding: 6rem 0 0;
+  }
 }
 .map__grid {
   margin: 7rem 0 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+@media (max-width: 767px) {
+  .map__grid {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 4rem 0 0;
+  }
 }
 .map__card {
   text-align: center;
@@ -2783,6 +2890,11 @@
   font-weight: 500;
   margin: 2rem 0;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .map__card h4 {
+    font-size: 1.8rem;
+  }
 }
 .map__card a {
   font-size: 1.6rem;

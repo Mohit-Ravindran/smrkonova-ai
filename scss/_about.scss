@@ -1,6 +1,10 @@
 .about {
     padding: 20rem 0 0;
 
+    @media #{$xs} {
+        padding: 14rem 0 0;
+    }
+
     &__title {
 
         h2 {
@@ -14,6 +18,15 @@
 
             @media #{$xs} {
                 font-size: 3.2rem;
+                margin: 0 0 2rem;
+            }
+
+            @media #{$md} {
+                font-size: 4.2rem;
+            }
+
+            @media #{$lg} {
+                font-size: 4.2rem;
             }
 
             span {
@@ -46,17 +59,44 @@
             font-weight: 700;
             margin: 0;
             color: #fff;
-            border-bottom: 0.83px solid #FFFFFF26
+            border-bottom: 0.83px solid #FFFFFF26;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
         }
 
         .accordion-body {
             font-size: 1.6rem;
             font-weight: 400;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 1.4rem;
+            }
+        }
+
+        .accordion-button::after {
+            background-image: url(../assets/img/icons/plus.svg);
+            width: 3.2rem;
+            height: 3.2rem;
+            background-size: unset;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url(../assets/img/icons/minus.svg);
         }
     }
 
     &__row {
         margin: 10rem 0 0;
+
+        @media #{$xs} {
+            margin: 4rem 0 0;
+        }
     }
 }
