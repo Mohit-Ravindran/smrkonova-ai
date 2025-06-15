@@ -3229,11 +3229,4 @@ img {
 .mySwiper,
 .reviewSwiper {
   overflow: hidden;
-}
-
-@media (min-width: 1401px) {
-  .container {
-    max-width: 80% !important;
-    padding: 0 2rem;
-  }
 }/*# sourceMappingURL=style.css.map */
