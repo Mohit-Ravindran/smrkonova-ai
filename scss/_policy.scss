@@ -1,6 +1,11 @@
 .policy {
     padding: 20rem 0 4rem;
 
+    &__box {
+        background-color: #2B2B2B;
+        padding: 4rem;
+    }
+
     h1 {
         color: #fff;
         font-size: 4.8rem;
