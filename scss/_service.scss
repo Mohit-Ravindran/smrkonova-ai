@@ -1,6 +1,10 @@
 .service {
     padding: 20rem 0 0;
 
+    @media #{$xs} {
+        padding: 14rem 0 0;
+    }
+
     &__title {
         text-align: center;
 
@@ -17,6 +21,10 @@
             @media #{$xs} {
                 font-size: 3.2rem;
             }
+
+            @media #{$md} {
+                font-size: 4.2rem;
+            }
         }
 
         p {
@@ -24,6 +32,10 @@
             font-size: 2.4rem;
             font-weight: 500;
             margin: 0;
+
+            @media #{$xs} {
+                font-size: 1.4rem;
+            }
         }
     }
 
@@ -32,6 +44,16 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 4rem 0;
+            gap: 1.5rem;
+        }
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__card {
@@ -39,11 +61,27 @@
         border-radius: 4rem;
         padding: 3rem;
 
+        @media #{$xs} {
+            padding: 2rem;
+        }
+
+        img {
+            @media #{$xs} {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+
         h4 {
             font-size: 2.4rem;
             font-weight: 700;
             margin: 6rem 0 1rem;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+                margin: 2rem 0 1rem;
+            }
         }
 
         p {
@@ -51,6 +89,10 @@
             font-weight: 400;
             margin: 0;
             color: #B9B9B9;
+
+            @media #{$xs} {
+                font-size: 1.4rem;
+            }
         }
     }
 
@@ -58,6 +100,10 @@
         background-color: #2B2B2B;
         padding: 4rem 5rem;
         border-radius: 4.4rem;
+
+        @media #{$xs} {
+            padding: 2.4rem;
+        }
     }
 
     &__info-content {
@@ -66,6 +112,15 @@
             font-weight: 500;
             margin: 0 0 3rem;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 2.4rem;
+                margin: 2rem 0;
+            }
+
+            @media #{$md} {
+                font-size: 2.4rem;
+            }
         }
 
         p {
@@ -93,6 +148,11 @@
 
         @media #{$xs} {
             padding: 6rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
     }
 
@@ -104,6 +164,14 @@
             font-weight: 700;
             margin: 0 0 1.6rem;
             color: #fff;
+
+            @media #{$xs} {
+                font-size: 2.8rem;
+            }
+
+            @media #{$md} {
+                font-size: 4.2rem;
+            }
         }
 
         p {
@@ -111,6 +179,14 @@
             font-weight: 400;
             margin: 0;
             color: #B9B9B9;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
+
+            @media #{$md} {
+                font-size: 1.8rem;
+            }
         }
     }
 }
@@ -127,6 +203,10 @@
     &__title {
         margin: 0 0 7rem;
 
+        @media #{$xs} {
+            margin: 0 0 4rem;
+        }
+
         h2 {
             font-size: 6.4rem;
             font-weight: 700;
@@ -138,6 +218,10 @@
 
             @media #{$xs} {
                 font-size: 3.2rem;
+            }
+
+            @media #{$md} {
+                font-size: 4.2rem;
             }
 
             span {
@@ -153,6 +237,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__card {
@@ -165,6 +253,10 @@
             font-weight: 500;
             color: #fff;
             margin: 2.4rem 0 1rem;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
         }
 
         p {
@@ -172,6 +264,10 @@
             font-weight: 400;
             margin: 0;
             color: #B9B9B9;
+
+            @media #{$xs} {
+                font-size: 1.4rem;
+            }
         }
     }
 }
