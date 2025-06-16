@@ -102,6 +102,10 @@
   }
 
   &__title {
+    @media #{$xs} {
+      text-align: center;
+    }
+
     h2 {
       font-size: 6.4rem;
       font-weight: 700;
@@ -148,6 +152,14 @@
     padding: 4.8rem 2.4rem;
     height: 100%;
 
+    @media #{$xs} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+    }
+
     h3 {
       color: #fff;
       font-size: 1.6rem;
@@ -169,15 +181,21 @@
 
   &__img {
     margin: 0 0 4rem;
+    width: 7.2rem;
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $primary;
 
     @media #{$xs} {
       margin: 0 0 2rem;
     }
 
     img {
-      @media #{$xs} {
-        width: 4.8rem;
-      }
+      width: 4rem;
+      height: 4rem;
     }
   }
 
@@ -191,6 +209,7 @@
     @media #{$xs} {
       gap: 0.6rem;
       margin: 2rem 0;
+      justify-content: center;
     }
 
     img {
@@ -214,6 +233,10 @@
   }
 
   &__left {
+    @media #{$xs} {
+      text-align: center;
+    }
+
     h2 {
       font-size: 6.4rem;
       font-weight: 700;
@@ -267,9 +290,15 @@
       white-space: nowrap;
 
       @media #{$xs} {
-
         margin: 3rem 0 0;
         padding: 0.6rem;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
       }
 
       .nav-item {
@@ -279,6 +308,11 @@
           padding: 1.6rem 2.4rem;
           color: #fff;
           border-radius: 3.5rem;
+
+          @media #{$xs} {
+            min-width: 25rem;
+            background-color: #000;
+          }
 
         }
 
@@ -384,12 +418,22 @@
 
   &__tab {
     .nav-pills {
-      justify-content: space-between;
+      justify-content: center;
       gap: 3rem;
       margin: 0 0 4rem;
       flex-wrap: nowrap;
       white-space: nowrap;
       overflow-x: auto;
+
+      @media #{$xs} {
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
 
       .nav-item {
         .nav-link {
@@ -399,6 +443,10 @@
           gap: 1.2rem;
           background-color: #000;
           border-radius: 10rem;
+
+          @media #{$xs} {
+            min-width: 25rem;
+          }
 
           span {
             font-size: 1.2rem;
@@ -430,6 +478,8 @@
   }
 
   &__left {
+
+
     h3 {
       font-size: 4rem;
       font-weight: 700;
@@ -438,6 +488,7 @@
 
       @media #{$xs} {
         font-size: 2.4rem;
+        text-align: center;
       }
 
       @media #{$md} {
@@ -489,6 +540,8 @@
   }
 
   &__link {
+    text-align: center;
+
     a {
       background-color: $primary;
       display: inline-flex;
@@ -600,6 +653,7 @@
     @media #{$xs} {
       background-color: #2B2B2B;
       padding: 3rem 2rem;
+      text-align: center;
     }
 
     h3 {
@@ -669,6 +723,8 @@
     @media #{$xs} {
       flex-direction: column;
       gap: 2rem;
+      align-items: center;
+      margin: 0 0 3rem;
     }
 
     a {
@@ -733,6 +789,10 @@
 
   &__content {
     margin: 4rem 0 0;
+
+    @media #{$xs} {
+      text-align: center;
+    }
 
     h3 {
       margin: 0 0 1.6rem;
@@ -799,8 +859,9 @@
     @media #{$xs} {
       flex-direction: column;
       gap: 2rem;
-      align-items: baseline;
+      align-items: center;
       margin: 0 0 2rem;
+
     }
 
     h2 {
@@ -815,6 +876,7 @@
 
       @media #{$xs} {
         font-size: 2.8rem;
+        margin: 0 0 0.6rem;
       }
 
       @media #{$md} {
@@ -877,6 +939,21 @@
 
   &__content {
     margin: 1.2rem 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -9px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      background-image: url(../assets/img/icons/comma.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 1;
+      width: 3rem;
+    }
 
     h4 {
       font-size: 1.6rem;
@@ -951,6 +1028,18 @@
 
       li {
         list-style-type: none;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+          width: 50%;
+          filter: grayscale(100%);
+          transition: all 0.3s ease;
+
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
 
       }
     }
@@ -966,6 +1055,10 @@
   }
 
   &__bg {
+    @media #{$xs} {
+      display: none;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -993,9 +1086,12 @@
     padding: 14rem 4rem 6rem;
     text-align: center;
 
+
     @media #{$xs} {
-      padding: 10rem 2rem 3rem;
+      padding: 3rem 2rem 3rem;
       border-radius: 3rem;
+      background-color: #2B2B2B;
+
     }
 
     h2 {

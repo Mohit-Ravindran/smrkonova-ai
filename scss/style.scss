@@ -78,6 +78,15 @@ img {
   overflow: hidden;
 }
 
+.scrolled {
+  margin: 0;
+  border-radius: 0;
+}
+
+#mainHeader {
+  transition: all 0.3s ease;
+}
+
 // @media (min-width:1401px) {
 //   .container {
 //     max-width: 80% !important;
