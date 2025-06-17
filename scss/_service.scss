@@ -301,6 +301,22 @@
             }
         }
     }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(234.5deg, #FFD190 22.65%, #FF5599 76.31%, #FF14CC 90.61%);
+
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+    }
 }
 
 @keyframes moveRight {
