@@ -56,21 +56,47 @@
         }
     }
 
+    &__img {
+        width: 5.8rem;
+        height: 5.8rem;
+        border-radius: 50%;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__arrow {
+        text-align: end;
+        margin: 2rem 0 0;
+    }
+
     &__card {
         background-color: #2B2B2B;
         border-radius: 4rem;
         padding: 3rem;
+        border: 0.1rem solid transparent;
+
+        &:hover {
+            border: 0.1rem solid $primary;
+
+            .service__arrow {
+                img {
+                    animation: moveRight 1.5s infinite;
+                }
+            }
+        }
 
         @media #{$xs} {
             padding: 2rem;
         }
 
-        img {
-            @media #{$xs} {
-                width: 3.2rem;
-                height: 3.2rem;
-            }
-        }
+
 
         h4 {
             font-size: 2.4rem;
@@ -274,5 +300,19 @@
                 font-size: 1.4rem;
             }
         }
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }

@@ -259,6 +259,7 @@
 }
 .banner__content h1 span.highlight {
   color: #BCA921;
+  padding: 0;
 }
 .banner__content p {
   font-size: 2.4rem;
@@ -801,8 +802,10 @@
     margin: 2rem 0 0;
   }
 }
-.tools__link {
-  text-align: center;
+@media (max-width: 767px) {
+  .tools__link {
+    text-align: center;
+  }
 }
 .tools__link a {
   background-color: #0073ff;
@@ -1962,20 +1965,45 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.service__img {
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  background-color: #0073ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.service__img img {
+  width: 3rem;
+  height: 3rem;
+}
+.service__arrow {
+  text-align: end;
+  margin: 2rem 0 0;
+}
 .service__card {
   background-color: #2B2B2B;
   border-radius: 4rem;
   padding: 3rem;
+  border: 0.1rem solid transparent;
+}
+.service__card:hover {
+  border: 0.1rem solid #0073ff;
+}
+.service__card:hover .service__arrow img {
+  -webkit-animation: moveRight 1.5s infinite;
+          animation: moveRight 1.5s infinite;
 }
 @media (max-width: 767px) {
   .service__card {
     padding: 2rem;
-  }
-}
-@media (max-width: 767px) {
-  .service__card img {
-    width: 3.2rem;
-    height: 3.2rem;
   }
 }
 .service__card h4 {
@@ -2194,6 +2222,35 @@
   }
 }
 
+@-webkit-keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .about {
   padding: 20rem 0 0;
 }

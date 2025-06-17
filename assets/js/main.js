@@ -28,16 +28,24 @@ function setActiveLink() {
         activeLinks.forEach(link => link.classList.add('active'));
     }
 }
-
 // Load header and then set active link
 fetch('./shared/header.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
-        setActiveLink(); // Call this after header is loaded
+        setActiveLink(); // Optional: highlight the active nav item
+
+        // Add scroll event listener AFTER header is loaded
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     })
     .catch(error => console.error('Error loading header:', error));
-
 
 // Load review
 fetch('./shared/review.html')
@@ -167,11 +175,3 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-window.addEventListener('scroll', function () {
-    const header = document.getElementById('mainHeader');
-    if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});

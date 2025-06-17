@@ -41,6 +41,7 @@
 
       span.highlight {
         color: #BCA921;
+        padding: 0;
       }
     }
 
@@ -540,7 +541,9 @@
   }
 
   &__link {
-    text-align: center;
+    @media #{$xs} {
+      text-align: center;
+    }
 
     a {
       background-color: $primary;
