@@ -682,6 +682,10 @@
     font-size: 1.4rem;
   }
 }
+.tools__icon img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
 .tools__tab .nav-pills {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -740,6 +744,10 @@
 }
 .tools__tab .nav-pills .nav-item .nav-link.active .tools__icon {
   background-color: #fff;
+}
+.tools__tab .nav-pills .nav-item .nav-link.active .tools__icon img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 .tools__icon {
   width: 3.2rem;

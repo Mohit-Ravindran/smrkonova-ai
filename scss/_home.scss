@@ -436,6 +436,13 @@
     }
   }
 
+  &__icon {
+    img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
   &__tab {
     .nav-pills {
       justify-content: center;
@@ -480,6 +487,10 @@
 
           .tools__icon {
             background-color: #fff;
+
+            img {
+              filter: invert(1);
+            }
           }
         }
       }
