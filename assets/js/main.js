@@ -83,12 +83,13 @@ fetch('./shared/footer.html')
     .then(data => document.getElementById('footer').innerHTML = data);
 
 
+// Load contact form HTML
 fetch('./shared/contact.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('contact').innerHTML = data;
 
-        // Run the script AFTER content is injected
+        // Run after HTML is injected
         initContactForm();
     });
 
@@ -96,6 +97,8 @@ function initContactForm() {
     const steps = document.querySelectorAll('.contact-step');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const form = document.getElementById('multiStepForm'); // Make sure your form has this ID
+
     let currentStep = 0;
 
     function showStep(index) {
@@ -103,10 +106,16 @@ function initContactForm() {
             step.style.display = i === index ? 'block' : 'none';
         });
 
-        prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
-        nextBtn.innerHTML = index === steps.length - 1
-            ? '<span>Submit</span>'
-            : '<span>Next</span><img src="./assets/img/icons/right-arrow.svg" alt="">';
+        if (index === steps.length - 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+            nextBtn.innerHTML = index === steps.length - 2
+                ? '<span>Submit</span>'
+                : '<span>Next</span><img src="./assets/img/icons/right-arrow.svg" alt="">';
+            nextBtn.style.display = 'inline-block';
+        }
     }
 
     prevBtn.addEventListener('click', function () {
@@ -117,15 +126,33 @@ function initContactForm() {
     });
 
     nextBtn.addEventListener('click', function () {
-        if (currentStep < steps.length - 1) {
+        if (currentStep === steps.length - 2) {
+            // Submit form data to Google Sheets
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            fetch('https://script.google.com/macros/s/AKfycbxdyHsQbfCGLHNp1YY5l5vcKkDx9PBUL6vO7UzqBmBS1kuH3hu8igNinjcpLygh_wbOOw/exec', {
+                method: 'POST',
+                body: JSON.stringify(data),
+            })
+                .then(res => res.json())
+                .then(result => {
+                    console.log("Form submitted:", result);
+                    currentStep++;
+                    showStep(currentStep); // Show Thank You step
+                })
+                .catch(err => {
+                    alert("Submission failed. Try again.");
+                    console.error(err);
+                });
+        } else if (currentStep < steps.length - 2) {
             currentStep++;
             showStep(currentStep);
-        } else {
-            document.getElementById('contactForm').submit(); // or handle final submission
         }
     });
 
-    showStep(currentStep); // Show the first step initially
+    showStep(currentStep); // Initialize step 0
 }
 
 
