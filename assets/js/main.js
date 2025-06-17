@@ -105,7 +105,8 @@ function initContactForm() {
     const steps = document.querySelectorAll('.contact-step');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const form = document.getElementById('multiStepForm'); // Make sure your form has this ID
+    const form = document.getElementById('multiStepForm');
+    const contactBtnWrapper = document.querySelector('.contact__btn'); // Add this line
 
     let currentStep = 0;
 
@@ -115,9 +116,10 @@ function initContactForm() {
         });
 
         if (index === steps.length - 1) {
-            prevBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
+            // Hide both buttons and the entire button wrapper on the last step
+            contactBtnWrapper.style.display = 'none';
         } else {
+            contactBtnWrapper.style.display = 'block'; // Show buttons for other steps
             prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
             nextBtn.innerHTML = index === steps.length - 2
                 ? '<span>Submit</span>'
