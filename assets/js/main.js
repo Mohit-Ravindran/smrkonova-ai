@@ -29,7 +29,7 @@ function setActiveLink() {
     }
 }
 // Load header and then set active link
-fetch('./shared/header.html')
+fetch('/./shared/header.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -81,12 +81,12 @@ fetch('./shared/review.html')
     });
 
 // Load chat
-fetch('./shared/chat.html')
+fetch('/./shared/chat.html')
     .then(res => res.text())
     .then(data => document.getElementById('chat').innerHTML = data);
 
 // Load footer
-fetch('./shared/footer.html')
+fetch('/./shared/footer.html')
     .then(res => res.text())
     .then(data => document.getElementById('footer').innerHTML = data);
 

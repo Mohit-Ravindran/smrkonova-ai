@@ -178,8 +178,11 @@
     }
 
     &__right {
+        position: sticky;
+        top: 12rem;
+
         @media #{$xs} {
-            display: none;
+            margin: 0 0 4rem;
         }
     }
 }

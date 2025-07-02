@@ -2797,9 +2797,13 @@
 .details__accordion .accordion-button:not(.collapsed)::after {
   background-image: url(../assets/img/icons/minus.svg);
 }
+.details__right {
+  position: sticky;
+  top: 12rem;
+}
 @media (max-width: 767px) {
   .details__right {
-    display: none;
+    margin: 0 0 4rem;
   }
 }
 
