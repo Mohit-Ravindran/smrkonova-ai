@@ -92,6 +92,151 @@
       width: 100%;
     }
   }
+
+  &__grid {
+    display: flex;
+    gap: 2rem;
+    align-items: end;
+
+    @media #{$xs} {
+      flex-direction: column;
+      margin: 3rem 0 0;
+    }
+
+    @media #{$md} {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+  }
+
+  &__btm {
+    margin: 6rem 0 0;
+
+    p {
+      color: #FFFFFFB2;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 0 0 1;
+    }
+
+    h4 {
+      font-size: 4.8rem;
+      font-weight: 500;
+      margin: 0;
+      color: #000;
+    }
+  }
+
+  &__ai-img {
+    img {
+      border-radius: 4rem;
+      width: 100%;
+    }
+  }
+
+  &__middle-img {
+    text-align: center;
+
+    h4 {
+      color: #fff;
+      font-size: 4.8rem;
+      font-weight: 500;
+      margin: 4.8rem 0 0;
+    }
+
+    p {
+      color: #B9B9B9;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__map {
+    @media #{$xs} {
+      text-align: center;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 0 0 0.2rem;
+    }
+
+    h4 {
+      color: #000;
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin: 0 0 7rem;
+    }
+  }
+
+  &__exp {
+    @media #{$xs} {
+      text-align: center;
+    }
+
+    h4 {
+      font-size: 4.8rem;
+      font-weight: 500;
+      margin: 0 0 0.4rem;
+      color: #fff;
+    }
+
+    p {
+      color: #B9B9B9;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 0 0 0.4rem;
+    }
+  }
+
+  &__card {
+    width: 20%;
+    border-radius: 4rem;
+    height: max-content;
+
+    @media #{$xs} {
+      width: 100%;
+    }
+
+    @media #{$md} {
+      width: 30%;
+    }
+
+    &:nth-child(2) {
+      background-color: #BCA921;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 2.8rem 3rem;
+      justify-content: space-between;
+
+      @media #{$xs} {
+        align-items: center;
+        gap: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: #2B2B2B;
+      padding: 2.8rem 3rem;
+    }
+
+    &:nth-child(4) {
+      background-color: #C2C4E4;
+      padding: 2.8rem 3rem;
+    }
+
+    &:nth-child(5) {
+      background-color: #2B2B2B;
+      padding: 2.8rem 3rem;
+    }
+
+  }
 }
 
 .work {
