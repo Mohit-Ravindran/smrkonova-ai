@@ -1270,6 +1270,32 @@
     }
   }
 
+  &__dots {
+    margin: 5rem 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .swiper-pagination-bullet {
+      list-style-type: none;
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: #2E313D;
+      border-radius: 50%;
+      margin: 0 !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: transparent;
+      border: 1px solid #0073FF;
+    }
+
+  }
+
 }
 
 .chat {

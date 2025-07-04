@@ -66,6 +66,11 @@ fetch('./shared/review.html')
                 nextEl: '.review__right',
                 prevEl: '.review__left',
             },
+            pagination: {
+                el: '.review__dots',
+                clickable: true,
+                type: 'bullets', // Ensures bullet-style pagination
+            },
             breakpoints: {
                 0: {
                     slidesPerView: 1,
