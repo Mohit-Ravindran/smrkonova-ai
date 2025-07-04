@@ -58,6 +58,10 @@ img {
     font-size: 1.6rem;
     font-weight: 500;
   }
+
+  img {
+    animation: arrowRight 1.5s infinite;
+  }
 }
 
 .outline-btn {
