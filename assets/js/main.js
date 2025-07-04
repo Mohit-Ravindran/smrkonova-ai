@@ -111,7 +111,8 @@ function initContactForm() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const form = document.getElementById('multiStepForm');
-    const contactBtnWrapper = document.querySelector('.contact__btn'); // Add this line
+    const contactBtnWrapper = document.querySelector('.contact__btn');
+    const submitBtnOriginalHTML = nextBtn.innerHTML; // Store original button HTML
 
     let currentStep = 0;
 
@@ -121,10 +122,9 @@ function initContactForm() {
         });
 
         if (index === steps.length - 1) {
-            // Hide both buttons and the entire button wrapper on the last step
             contactBtnWrapper.style.display = 'none';
         } else {
-            contactBtnWrapper.style.display = 'block'; // Show buttons for other steps
+            contactBtnWrapper.style.display = 'block';
             prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
             nextBtn.innerHTML = index === steps.length - 2
                 ? '<span>Submit</span>'
@@ -142,6 +142,10 @@ function initContactForm() {
 
     nextBtn.addEventListener('click', function () {
         if (currentStep === steps.length - 2) {
+            // Show loader inside button
+            nextBtn.innerHTML = '<span class="loader"></span>';
+            nextBtn.disabled = true;
+
             // Submit form data to Google Sheets
             const formData = new FormData(form);
             const data = {};
@@ -155,11 +159,14 @@ function initContactForm() {
                 .then(result => {
                     console.log("Form submitted:", result);
                     currentStep++;
-                    showStep(currentStep); // Show Thank You step
+                    showStep(currentStep);
                 })
                 .catch(err => {
                     alert("Submission failed. Try again.");
                     console.error(err);
+                    // Restore original button state
+                    nextBtn.innerHTML = submitBtnOriginalHTML;
+                    nextBtn.disabled = false;
                 });
         } else if (currentStep < steps.length - 2) {
             currentStep++;
@@ -167,7 +174,7 @@ function initContactForm() {
         }
     });
 
-    showStep(currentStep); // Initialize step 0
+    showStep(currentStep);
 }
 
 
