@@ -368,6 +368,26 @@
       cursor: pointer;
     }
   }
+
+  &__symbol {
+    position: relative;
+
+    @media #{$xs} {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      @media #{$md} {
+        left: 25%;
+      }
+    }
+  }
 }
 
 .we {

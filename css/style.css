@@ -603,6 +603,27 @@
 .work__arrow div {
   cursor: pointer;
 }
+.work__symbol {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .work__symbol {
+    display: none;
+  }
+}
+.work__symbol img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .work__symbol img {
+    left: 25%;
+  }
+}
 
 .we {
   padding: 16rem 0;
