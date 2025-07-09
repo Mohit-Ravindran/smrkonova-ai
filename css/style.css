@@ -2699,6 +2699,25 @@
     margin: 4rem 0 0;
   }
 }
+.about__arrow {
+  position: relative;
+  -webkit-animation: arrowUp 1.5s infinite;
+  animation: arrowUp 1.5s infinite;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .about__arrow {
+    display: none;
+  }
+}
+.about__arrow img {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -41%);
+  z-index: 2;
+}
 
 .project {
   padding: 20rem 0 4rem;

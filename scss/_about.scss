@@ -99,4 +99,24 @@
             margin: 4rem 0 0;
         }
     }
+
+    &__arrow {
+        position: relative;
+        -webkit-animation: arrowUp 1.5s infinite;
+        animation: arrowUp 1.5s infinite;
+        z-index: 2;
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -41%);
+            z-index: 2;
+        }
+    }
 }
