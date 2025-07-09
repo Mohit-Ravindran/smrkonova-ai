@@ -1291,6 +1291,7 @@
   background-color: #2B2B2B;
   border-radius: 2.4rem;
   padding: 2.4rem;
+  display: block;
 }
 .news__content {
   margin: 4rem 0 0;
@@ -1323,7 +1324,7 @@
   bottom: 2rem;
   right: 2rem;
 }
-.news__link a {
+.news__link .news__tag {
   width: 6rem;
   height: 6rem;
   background-color: #0073ff;
@@ -1338,7 +1339,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.news__link a img {
+.news__link .news__tag img {
   -webkit-animation: arrowRight 1.5s infinite;
           animation: arrowRight 1.5s infinite;
 }
