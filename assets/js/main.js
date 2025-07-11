@@ -93,8 +93,19 @@ fetch('/./shared/chat.html')
 // Load footer
 fetch('/./shared/footer.html')
     .then(res => res.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
 
+        // Manually add Tawk.to script if it didn't execute
+        if (typeof Tawk_API === 'undefined') {
+            var s1 = document.createElement('script');
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/659edc748d261e1b5f51a2a8/1hjq8qa2u';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            document.body.appendChild(s1);
+        }
+    });
 
 // Load contact form HTML
 fetch('./shared/contact.html')
