@@ -257,7 +257,9 @@
     }
 
     a {
-      &:nth-child(2) {
+      height: 56px;
+
+      &:nth-child(1) {
         background-color: #25D366;
 
         img {

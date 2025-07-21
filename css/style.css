@@ -484,10 +484,13 @@
             flex-direction: column;
   }
 }
-.banner__btns a:nth-child(2) {
+.banner__btns a {
+  height: 56px;
+}
+.banner__btns a:nth-child(1) {
   background-color: #25D366;
 }
-.banner__btns a:nth-child(2) img {
+.banner__btns a:nth-child(1) img {
   width: 2rem;
   height: 2rem;
   -webkit-animation: none;
