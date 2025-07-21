@@ -245,6 +245,30 @@
     }
 
   }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+
+    @media #{$xs} {
+      flex-direction: column;
+    }
+
+    a {
+      &:nth-child(2) {
+        background-color: #25D366;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          animation: none;
+          filter: brightness(300%);
+        }
+      }
+    }
+  }
 }
 
 .work {

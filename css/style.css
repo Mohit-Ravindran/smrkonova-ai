@@ -464,6 +464,37 @@
   background-color: #2B2B2B;
   padding: 2.8rem 3rem;
 }
+.banner__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 767px) {
+  .banner__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.banner__btns a:nth-child(2) {
+  background-color: #25D366;
+}
+.banner__btns a:nth-child(2) img {
+  width: 2rem;
+  height: 2rem;
+  -webkit-animation: none;
+          animation: none;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
+}
 
 .work {
   padding: 10rem 0;
