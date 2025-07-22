@@ -3085,14 +3085,21 @@
   margin: 0 0 2rem;
 }
 .details__contact-box a {
-  border: 1px solid #FFFFFF;
-  border-radius: 1rem;
-  padding: 1rem;
-  width: 100%;
-  display: block;
-  font-size: 2rem;
-  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+  background-color: #25D366;
+}
+.details__contact-box a span {
   color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 .details__accordion .accordion {
   --bs-accordion-bg: transparent;
