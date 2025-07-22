@@ -1,17 +1,20 @@
 function setActiveLink() {
     // Get current page path
     const path = window.location.pathname;
-    const currentPage = path.split('/').pop() || 'index.html';
+    let currentPage = path.split('/').pop() || 'index.html';
+
+    // Remove .html if present to handle both cases
+    currentPage = currentPage.replace(/\.html$/, '');
 
     // Map page URLs to data-page values
     const pageMap = {
-        'index.html': 'home',
+        'index': 'home',
         '': 'home',
-        'service.html': 'service',
-        'about.html': 'about',
-        'blog.html': 'blog',
-        'contact-us.html': 'contact',
-        'ai.html': 'ai'
+        'service': 'service',
+        'about': 'about',
+        'blog': 'blog',
+        'contact-us': 'contact',
+        'ai-automation': 'ai-automation'
     };
 
     // Get the current page identifier
