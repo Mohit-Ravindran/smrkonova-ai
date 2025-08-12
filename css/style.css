@@ -2049,7 +2049,7 @@
 .contact__form h4 {
   font-size: 1.6rem;
   font-weight: 400;
-  margin: 0 0 2rem;
+  margin: 0 0 3rem;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -3050,6 +3050,28 @@
   padding: 6rem 0 !important;
 }
 
+.default-btn a {
+  background-color: #0073ff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+}
+.default-btn a span {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.default-btn a img {
+  -webkit-animation: arrowRight 1.5s infinite;
+          animation: arrowRight 1.5s infinite;
+}
+
 .details {
   padding: 20rem 0 0;
 }
@@ -3169,7 +3191,17 @@
   font-weight: 500;
   margin: 0 0 2rem;
 }
-.details__contact-box a {
+.details__two-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+}
+.details__two-btn a:nth-child(1) {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3181,7 +3213,7 @@
   border-radius: 10rem;
   background-color: #25D366;
 }
-.details__contact-box a span {
+.details__two-btn a:nth-child(1) span {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
