@@ -11,6 +11,7 @@ function setActiveLink() {
         'index': 'home',
         '': 'home',
         'service': 'service',
+        'projects': 'projects',
         'about': 'about',
         'blog': 'blog',
         'contact-us': 'contact',
