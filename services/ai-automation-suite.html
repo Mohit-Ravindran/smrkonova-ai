@@ -10,6 +10,8 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <script>function initApollo() {
             var n = Math.random().toString(36).substring(7), o = document.createElement("script");
             o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
@@ -179,11 +181,19 @@
                             <div class="details__contact">
                                 <div class="details__contact-box">
                                     <h4>Any Questions? <br>Let's talk</h4>
-                                    <a href="https://wa.me/919740662046?text=Hi!%20I'm%20interested%20in%20the%20services%20of%20Smrkonova%20Softech%20Solutions.%20I'd%20like%20to%20discuss%20how%20you%20can%20help%20with%20my%20project%20requirements.%20Let's%20talk!"
-                                        target="_blank">
-                                        <img src="../assets/img/icons/whatsapp.svg" alt="">
-                                        <span>Chat With Us Now!</span>
-                                    </a>
+                                    <div class="details__two-btn">
+                                        <a href="https://wa.me/919740662046?text=Hi!%20I'm%20interested%20in%20the%20services%20of%20Smrkonova%20Softech%20Solutions.%20I'd%20like%20to%20discuss%20how%20you%20can%20help%20with%20my%20project%20requirements.%20Let's%20talk!"
+                                            target="_blank">
+                                            <img src="../assets/img/icons/whatsapp.svg" alt="">
+                                            <span>Chat With Us Now!</span>
+                                        </a>
+                                        <a href=""
+                                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kalyani-smrkonova/30min'});return false;"
+                                            class="default-btn">
+                                            <span>Free Strategy Call</span>
+                                            <img src="../assets/img/icons/right-arrow.svg" alt="">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -198,6 +208,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
     <script src="../assets/js/main.js"></script>
 </body>
 

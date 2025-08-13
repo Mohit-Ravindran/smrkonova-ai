@@ -2065,7 +2065,7 @@
   font-weight: 400;
   color: #000;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
 }
 .contact__form input:focus {
   background-color: #fff;
@@ -2088,7 +2088,7 @@
 .contact__form textarea {
   background-color: #fff;
   border-radius: 2rem;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   border: none;
   padding: 2rem;
@@ -2864,7 +2864,7 @@
 }
 .project__count span {
   display: block;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   color: #fff;
@@ -2879,6 +2879,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   display: block;
+  text-transform: uppercase;
 }
 .project__content h3 {
   font-size: 3.2rem;
@@ -3014,6 +3015,11 @@
 }
 .project__large-img {
   margin: 2rem 0 0;
+}
+@media (max-width: 767px) {
+  .project__view-all {
+    display: none;
+  }
 }
 .project__view-all a {
   background-color: #0073ff;
@@ -3212,6 +3218,9 @@
   padding: 1.2rem 2.4rem;
   border-radius: 10rem;
   background-color: #25D366;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .details__two-btn a:nth-child(1) span {
   color: #fff;
@@ -4071,12 +4080,8 @@
 }
 @media (max-width: 767px) {
   .projects__page ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 3rem;
-    padding: 4rem 0;
+    gap: 2rem;
+    padding: 4rem 2rem;
   }
 }
 .projects__page ul li {
@@ -4093,7 +4098,7 @@
 }
 @media (max-width: 767px) {
   .projects__page ul li a img {
-    width: 3rem;
+    width: 6rem;
   }
 }
 .projects__page-content.right p,
@@ -4115,6 +4120,7 @@
 @media (max-width: 767px) {
   .projects__page-content h4 {
     font-size: 1.6rem;
+    display: none;
   }
 }
 .projects__end {
@@ -4129,6 +4135,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+.projects__all-btn {
+  margin: 3rem 0 0;
+  display: none;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .projects__all-btn {
+    display: block;
+  }
 }
 
 .banner-img {
@@ -4481,6 +4497,9 @@ img {
   padding: 1.2rem 2.4rem;
   border-radius: 10rem;
   border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .default-btn span {
   color: #fff;

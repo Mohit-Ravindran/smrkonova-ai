@@ -211,9 +211,8 @@
             justify-content: space-between;
 
             @media #{$xs} {
-                flex-direction: column;
-                gap: 3rem;
-                padding: 4rem 0;
+                gap: 2rem;
+                padding: 4rem 2rem;
             }
 
             li {
@@ -226,7 +225,7 @@
 
                     img {
                         @media #{$xs} {
-                            width: 3rem;
+                            width: 6rem;
                         }
                     }
                 }
@@ -258,6 +257,7 @@
 
             @media #{$xs} {
                 font-size: 1.6rem;
+                display: none;
             }
         }
     }
@@ -267,6 +267,16 @@
         align-items: end;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    &__all-btn {
+        margin: 3rem 0 0;
+        display: none;
+        text-align: center;
+
+        @media #{$xs} {
+            display: block;
+        }
     }
 }
 
