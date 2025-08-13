@@ -3179,6 +3179,7 @@
   display: block;
   border-radius: 1rem;
   padding: 1rem 1.6rem;
+  text-transform: uppercase;
 }
 .details__list ul li a.active {
   background-color: #fff;
@@ -4116,6 +4117,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
+  text-transform: capitalize;
 }
 @media (max-width: 767px) {
   .projects__page-content h4 {
@@ -4135,6 +4137,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+}
+@media (max-width: 767px) {
+  .projects__end img:nth-child(2) {
+    width: 50%;
+  }
 }
 .projects__all-btn {
   margin: 3rem 0 0;

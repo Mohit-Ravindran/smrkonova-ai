@@ -254,6 +254,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin: 0;
+            text-transform: capitalize;
 
             @media #{$xs} {
                 font-size: 1.6rem;
@@ -267,6 +268,14 @@
         align-items: end;
         flex-direction: column;
         gap: 2rem;
+
+        img {
+            &:nth-child(2) {
+                @media #{$xs} {
+                    width: 50%;
+                }
+            }
+        }
     }
 
     &__all-btn {
