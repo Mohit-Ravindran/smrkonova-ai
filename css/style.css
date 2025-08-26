@@ -266,7 +266,7 @@
   padding: 0;
 }
 .banner__content p {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 400;
   margin: 4rem 0 2rem;
   color: #b9b9b9;
@@ -1499,7 +1499,7 @@
   right: 0;
   bottom: 0;
   content: "";
-  background-image: url(../assets/img/icons/comma.png);
+  background-image: url(../assets/img/icons/comma.webp);
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 1;
@@ -2261,7 +2261,7 @@
 }
 
 #contactForm {
-  background-image: url(../assets/img/contact/bg.png);
+  background-image: url(../assets/img/contact/bg.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: initial;
