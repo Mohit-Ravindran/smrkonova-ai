@@ -13,6 +13,23 @@
         position: relative;
     }
 
+    &__logo {
+        width: 100% !important;
+        height: 100% !important;
+
+        @media #{$lg} {
+            width: 60% !important;
+        }
+
+        @media #{$md} {
+            width: 60% !important;
+        }
+
+        @media #{$xs} {
+            width: 70% !important;
+        }
+    }
+
     &__banner {
 
         display: flex;
@@ -23,7 +40,8 @@
         @media #{$xs} {
             justify-content: end;
             flex-direction: column;
-            align-items: baseline;
+            align-items: center;
+            gap: 2rem;
         }
 
         img {
@@ -52,7 +70,7 @@
 
             @media #{$xs} {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
 
             li {
@@ -99,6 +117,13 @@
             color: #fff;
         }
 
+        h4 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0 0 2.4rem;
+            color: #fff;
+        }
+
         p {
             color: #B9B9B9;
             font-size: 1.6rem;
@@ -133,6 +158,8 @@
                 @media #{$xs} {
                     flex-direction: column;
                     gap: 1rem;
+                    align-items: center;
+                    text-align: center;
                 }
             }
         }
@@ -196,6 +223,7 @@
             font-size: 2rem;
             font-weight: 500;
             margin: 0;
+            text-align: left;
         }
     }
 
@@ -269,6 +297,10 @@
         flex-direction: column;
         gap: 2rem;
 
+        @media #{$xs} {
+            align-items: center;
+        }
+
         img {
             &:nth-child(2) {
                 @media #{$xs} {
@@ -286,6 +318,60 @@
         @media #{$xs} {
             display: block;
         }
+    }
+
+    &__title-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 2.4rem;
+
+        @media #{$xs} {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+
+        h3 {
+            margin: 0 !important;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            height: 4.8rem;
+            justify-content: center;
+            background-color: #BCA921;
+            padding: 1.2rem 2.4rem;
+            border-radius: 10rem;
+
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            img {
+                animation: blink 1s infinite;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
     }
 }
 
