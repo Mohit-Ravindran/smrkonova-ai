@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "ssuryareddy2277@gmail.com"; // 👉 your email
+    $to = "kalyani.smrkonova@gmail.com"; // 👉 your email
     $subject = "New Contact Form Submission";
 
     // HTML email body
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             body { font-family: Arial, sans-serif; color: #333; }
             .container { padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
             h2 { color: #0066cc; }
-            p { margin: 6px 0; }
+            p { margin: 10px 0;    font-size: 20px; }
             .label { font-weight: bold; color: #444; }
         </style>
     </head>
