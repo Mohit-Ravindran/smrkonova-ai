@@ -116,8 +116,6 @@ fetch('./shared/contact.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('contact').innerHTML = data;
-
-        // Run after HTML is injected
         initContactForm();
     });
 
@@ -127,7 +125,7 @@ function initContactForm() {
     const nextBtn = document.getElementById('nextBtn');
     const form = document.getElementById('multiStepForm');
     const contactBtnWrapper = document.querySelector('.contact__btn');
-    const submitBtnOriginalHTML = nextBtn.innerHTML; // Store original button HTML
+    const submitBtnOriginalHTML = nextBtn.innerHTML;
 
     let currentStep = 0;
 
@@ -137,6 +135,7 @@ function initContactForm() {
         });
 
         if (index === steps.length - 1) {
+            // Last step → hide buttons
             contactBtnWrapper.style.display = 'none';
         } else {
             contactBtnWrapper.style.display = 'block';
@@ -157,29 +156,33 @@ function initContactForm() {
 
     nextBtn.addEventListener('click', function () {
         if (currentStep === steps.length - 2) {
-            // Show loader inside button
+            // Show loader
             nextBtn.innerHTML = '<span class="loader"></span>';
             nextBtn.disabled = true;
 
-            // Submit form data to Google Sheets
+            // Collect form data
             const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
 
-            fetch('https://script.google.com/macros/s/AKfycbxdyHsQbfCGLHNp1YY5l5vcKkDx9PBUL6vO7UzqBmBS1kuH3hu8igNinjcpLygh_wbOOw/exec', {
+            fetch('sendmail.php', {
                 method: 'POST',
-                body: JSON.stringify(data),
+                body: formData
             })
-                .then(res => res.json())
+                .then(res => res.text())
                 .then(result => {
                     console.log("Form submitted:", result);
-                    currentStep++;
-                    showStep(currentStep);
+
+                    if (result.includes("success")) {
+                        currentStep++;
+                        showStep(currentStep);
+                    } else {
+                        alert("Submission failed: " + result);
+                        nextBtn.innerHTML = submitBtnOriginalHTML;
+                        nextBtn.disabled = false;
+                    }
                 })
                 .catch(err => {
                     alert("Submission failed. Try again.");
                     console.error(err);
-                    // Restore original button state
                     nextBtn.innerHTML = submitBtnOriginalHTML;
                     nextBtn.disabled = false;
                 });
@@ -204,3 +207,85 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+
+
+// Load contact form HTML
+// fetch('./shared/contact.html')
+//     .then(res => res.text())
+//     .then(data => {
+//         document.getElementById('contact').innerHTML = data;
+
+//         // Run after HTML is injected
+//         initContactForm();
+//     });
+
+// function initContactForm() {
+//     const steps = document.querySelectorAll('.contact-step');
+//     const prevBtn = document.getElementById('prevBtn');
+//     const nextBtn = document.getElementById('nextBtn');
+//     const form = document.getElementById('multiStepForm');
+//     const contactBtnWrapper = document.querySelector('.contact__btn');
+//     const submitBtnOriginalHTML = nextBtn.innerHTML; // Store original button HTML
+
+//     let currentStep = 0;
+
+//     function showStep(index) {
+//         steps.forEach((step, i) => {
+//             step.style.display = i === index ? 'block' : 'none';
+//         });
+
+//         if (index === steps.length - 1) {
+//             contactBtnWrapper.style.display = 'none';
+//         } else {
+//             contactBtnWrapper.style.display = 'block';
+//             prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+//             nextBtn.innerHTML = index === steps.length - 2
+//                 ? '<span>Submit</span>'
+//                 : '<span>Next</span><img src="./assets/img/icons/right-arrow.svg" alt="">';
+//             nextBtn.style.display = 'inline-block';
+//         }
+//     }
+
+//     prevBtn.addEventListener('click', function () {
+//         if (currentStep > 0) {
+//             currentStep--;
+//             showStep(currentStep);
+//         }
+//     });
+
+//     nextBtn.addEventListener('click', function () {
+//         if (currentStep === steps.length - 2) {
+//             // Show loader inside button
+//             nextBtn.innerHTML = '<span class="loader"></span>';
+//             nextBtn.disabled = true;
+
+//             // Submit form data to Google Sheets
+//             const formData = new FormData(form);
+//             const data = {};
+//             formData.forEach((value, key) => data[key] = value);
+
+//             fetch('https://script.google.com/macros/s/AKfycbxdyHsQbfCGLHNp1YY5l5vcKkDx9PBUL6vO7UzqBmBS1kuH3hu8igNinjcpLygh_wbOOw/exec', {
+//                 method: 'POST',
+//                 body: JSON.stringify(data),
+//             })
+//                 .then(res => res.json())
+//                 .then(result => {
+//                     console.log("Form submitted:", result);
+//                     currentStep++;
+//                     showStep(currentStep);
+//                 })
+//                 .catch(err => {
+//                     alert("Submission failed. Try again.");
+//                     console.error(err);
+//                     // Restore original button state
+//                     nextBtn.innerHTML = submitBtnOriginalHTML;
+//                     nextBtn.disabled = false;
+//                 });
+//         } else if (currentStep < steps.length - 2) {
+//             currentStep++;
+//             showStep(currentStep);
+//         }
+//     });
+
+//     showStep(currentStep);
+// }
