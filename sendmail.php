@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email setup
-    $to = "ssuryareddy2277@gmail.com"; // 👉 replace with your email
+    $to = "kalyani.smrkonova@gmail.com"; // 👉 replace with your email
     $subject = "New Contact Form Submission";
 
     $body = "You have a new message from your website:\n\n";
