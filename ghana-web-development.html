@@ -148,22 +148,22 @@
                   <p>100% free Consulation</p>
                 </div>
                 <div class="banners__form">
-                  <form>
+                  <form method="post" action="./mail.php">
                     <div class="mb-3">
                       <label class="form-label">Full Name</label>
-                      <input type="text" class="form-control" placeholder="Enter Your Name">
+                      <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">WhatsApp Number</label>
-                      <input type="text" class="form-control" placeholder="Enter Your Number">
+                      <input type="text" name="phone" class="form-control" placeholder="Enter Your Number">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Email</label>
-                      <input type="text" class="form-control" placeholder="Enter Your Email">
+                      <input type="email" name="email" class="form-control" placeholder="Enter Your Email">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Requirement</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                      <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="2"
                         placeholder="Enter Your Requirement"></textarea>
                     </div>
 
