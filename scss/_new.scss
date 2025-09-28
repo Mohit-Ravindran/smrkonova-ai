@@ -186,6 +186,10 @@
     }
 
     &__content {
+        @media #{$xs} {
+            text-align: center;
+        }
+
         h1 {
             color: #fff;
             font-size: 4.8rem;
@@ -859,6 +863,11 @@
             color: #fff;
             display: block;
             margin: 0 0 2rem;
+
+            @media #{$xs} {
+                text-align: center;
+                margin: 3rem 0 2rem;
+            }
         }
     }
 
@@ -866,6 +875,11 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        @media #{$xs} {
+            justify-content: center;
+            align-items: center;
+        }
 
         a,
         p {

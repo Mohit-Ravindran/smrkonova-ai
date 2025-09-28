@@ -4787,6 +4787,11 @@
   color: #fff;
   margin: 1rem 0 0;
 }
+@media (max-width: 767px) {
+  .banners__content {
+    text-align: center;
+  }
+}
 .banners__content h1 {
   color: #fff;
   font-size: 4.8rem;
@@ -5467,6 +5472,12 @@
   display: block;
   margin: 0 0 2rem;
 }
+@media (max-width: 767px) {
+  .footers__list-title h4 {
+    text-align: center;
+    margin: 3rem 0 2rem;
+  }
+}
 .footers__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5476,6 +5487,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+}
+@media (max-width: 767px) {
+  .footers__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .footers__list a,
 .footers__list p {
