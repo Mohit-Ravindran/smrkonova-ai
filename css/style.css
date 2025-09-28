@@ -4618,7 +4618,6 @@
 }
 @media (max-width: 767px) {
   .headers {
-    margin: 2rem;
     padding: 1rem;
   }
 }
@@ -4851,6 +4850,27 @@
   max-width: 60%;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .banners__contact {
+    max-width: 100%;
+    margin: 2rem 0 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banners__contact {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banners__contact {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .banners__contact {
+    max-width: 70%;
+  }
+}
 .banners__contact h3 {
   text-align: center;
   font-size: 2.4rem;
@@ -4983,6 +5003,11 @@
   padding: 8rem 0;
   background-color: #fff;
 }
+@media (max-width: 767px) {
+  .services {
+    padding: 6rem 0;
+  }
+}
 .services__title {
   margin: 0 0 6rem;
   text-align: center;
@@ -4995,6 +5020,7 @@
 @media (max-width: 767px) {
   .services__grid {
     grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -5022,6 +5048,11 @@
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
+@media (max-width: 767px) {
+  .services__card {
+    padding: 2rem;
+  }
+}
 .services__card:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
@@ -5035,14 +5066,29 @@
   margin: 2.4rem 0 1.8rem;
   color: #000;
 }
+@media (max-width: 767px) {
+  .services__card h3 {
+    font-size: 1.8rem;
+  }
+}
 .services__card p {
   color: #666;
   margin: 0;
   font-size: 1.6rem;
   font-weight: 400;
 }
+@media (max-width: 767px) {
+  .services__card p {
+    font-size: 1.4rem;
+  }
+}
 .services__card img {
   width: 12rem;
+}
+@media (max-width: 767px) {
+  .services__card img {
+    width: 8rem;
+  }
 }
 .services__img {
   width: 60px;
@@ -5065,6 +5111,11 @@
 .pricing {
   padding: 8rem 0;
   background-color: #f8fafc;
+}
+@media (max-width: 767px) {
+  .pricing {
+    padding: 6rem 0;
+  }
 }
 .pricing__title {
   margin: 0 0 6rem;
@@ -5191,6 +5242,11 @@
   padding: 8rem 0;
   background-color: #fff;
 }
+@media (max-width: 767px) {
+  .works {
+    padding: 6rem 0;
+  }
+}
 .works__title {
   margin: 0 0 6rem;
   text-align: center;
@@ -5281,6 +5337,11 @@
   padding: 8rem 0;
   background-color: #f8fafc;
 }
+@media (max-width: 767px) {
+  .client {
+    padding: 6rem 0;
+  }
+}
 .client__title {
   margin: 0 0 6rem;
   text-align: center;
@@ -5354,6 +5415,11 @@
 .promise {
   padding: 8rem 0;
   background-color: #fff;
+}
+@media (max-width: 767px) {
+  .promise {
+    padding: 6rem 0;
+  }
 }
 .promise__box {
   background: white;
