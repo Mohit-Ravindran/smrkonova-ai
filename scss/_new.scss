@@ -814,4 +814,30 @@
 
 .footers {
     background-color: #000;
+
+    &__list-title {
+        h4 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+            display: block;
+            margin: 0 0 2rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a,
+        p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #fff;
+            display: block;
+            margin: 0;
+        }
+
+    }
 }

@@ -5460,6 +5460,31 @@
 .footers {
   background-color: #000;
 }
+.footers__list-title h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin: 0 0 2rem;
+}
+.footers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.footers__list a,
+.footers__list p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  display: block;
+  margin: 0;
+}
 
 * {
   -webkit-box-sizing: border-box;
