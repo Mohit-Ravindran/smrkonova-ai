@@ -159,19 +159,19 @@
 }
 
 .banners {
-    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    // background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
     // min-height: 100vh;
     padding: 8rem 0 8rem;
-    // background-image: url(../assets/img/ghana/banner.webp);
+    background-image: url(../assets/img/ghana/banner.webp);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 
-    // @media #{$xs} {
-    //     background-image: url(../assets/img/ghana/res-banner.webp);
+    @media #{$xs} {
+        background-image: url(../assets/img/ghana/res-banner.webp);
 
-    // }
+    }
 
     &::before {
         position: absolute;
