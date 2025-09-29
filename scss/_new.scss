@@ -940,6 +940,10 @@
             font-size: 4rem;
             font-weight: 700;
             margin: 0 0 2rem;
+
+            @media #{$xs} {
+                font-size: 2.8rem;
+            }
         }
     }
 
@@ -954,6 +958,10 @@
             color: #fff;
             font-size: 2.4rem;
             font-weight: 400;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
 
         }
     }
@@ -981,7 +989,7 @@
 
     &__note {
         margin: 8rem 0 0;
-        background: #0073FF;
+        background: #F8B02B;
         padding: 2rem;
         text-align: center;
         border-radius: 1.2rem;
@@ -991,6 +999,10 @@
             font-size: 2.4rem;
             font-weight: 600;
             margin: 0;
+
+            @media #{$xs} {
+                font-size: 1.8rem;
+            }
         }
 
     }
@@ -1147,6 +1159,26 @@
         }
 
         &:nth-child(2) {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 2.4rem;
+            border-radius: 10rem;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            img {
+                width: 2rem;
+            }
+        }
+
+        &:nth-child(3) {
             background-color: transparent;
             display: -webkit-inline-box;
             display: -ms-inline-flexbox;
@@ -1198,5 +1230,21 @@
             font-size: 1.4rem;
             font-weight: 500;
         }
+    }
+}
+
+.thank-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out 0.2s both;
+
+    img {
+        width: 3rem;
     }
 }
