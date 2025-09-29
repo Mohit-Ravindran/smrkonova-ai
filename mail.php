@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $to = "ssuryareddy2277@gmail.com"; // 👉 your email
-    $subject = "New Contact Form Submission";
+    $subject = "Contact Form Ghana";
 
     // Email Body
     $body = "
