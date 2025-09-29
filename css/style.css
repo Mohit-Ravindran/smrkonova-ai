@@ -4766,6 +4766,11 @@
   background-repeat: no-repeat;
   position: relative;
 }
+@media (max-width: 767px) {
+  .banners {
+    background-image: url(../assets/img/ghana/res-banner.webp);
+  }
+}
 .banners::before {
   position: absolute;
   content: "";
@@ -4843,6 +4848,13 @@
   gap: 1.4rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .banners__content ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .banners__content ul li {
   list-style-type: none;
@@ -5062,10 +5074,22 @@
   height: 56.3rem;
   border-radius: 2rem;
 }
+@media (max-width: 991px) {
+  .platform__video iframe {
+    width: 100%;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .platform__video iframe {
+    width: 100%;
+    height: 50rem;
+  }
+}
 
 .choose {
   padding: 8rem 0;
-  background-color: #fff;
+  background-color: #f8fafc;
 }
 @media (max-width: 767px) {
   .choose {
@@ -5670,10 +5694,20 @@
   margin-bottom: 12px;
   color: #000;
 }
+@media (max-width: 767px) {
+  .thank-container h1 {
+    font-size: 2rem;
+  }
+}
 .thank-container p {
   color: #b9b9b9;
   margin-bottom: 24px;
   font-size: 1.8rem;
+}
+@media (max-width: 767px) {
+  .thank-container p {
+    font-size: 1.4rem;
+  }
 }
 .thank-container a {
   background-color: #0073ff;
@@ -5703,11 +5737,21 @@
   margin-bottom: 15px;
   font-weight: 600;
 }
+@media (max-width: 767px) {
+  .thank-box h4 {
+    font-size: 1.8rem;
+  }
+}
 .thank-box p {
   font-size: 16px;
   color: #4a5568;
   margin-bottom: 25px;
   line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .thank-box p {
+    font-size: 1.4rem;
+  }
 }
 
 .thank-btns {
@@ -5721,6 +5765,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 767px) {
+  .thank-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .thank-btns a:nth-child(1) {
   background-color: #0073ff;
@@ -5761,6 +5813,38 @@
   background: linear-gradient(90deg, #667eea, #764ba2);
   margin: 0 auto 3rem;
   border-radius: 2px;
+}
+
+.sticky-cta {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-box-shadow: 0 10px 30px rgba(71, 255, 77, 0.536);
+          box-shadow: 0 10px 30px rgba(71, 255, 77, 0.536);
+  -webkit-animation: bounce-sticky 3s infinite;
+          animation: bounce-sticky 3s infinite;
+}
+.sticky-cta a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.sticky-cta a span {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 * {
