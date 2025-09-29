@@ -5023,6 +5023,20 @@
             transform: translateY(-10px);
   }
 }
+.platform {
+  padding: 8rem 0;
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .platform {
+    padding: 6rem 0;
+  }
+}
+.platform__title {
+  margin: 0 0 6rem;
+  text-align: center;
+}
+
 .choose {
   padding: 8rem 0;
   background-color: #fff;

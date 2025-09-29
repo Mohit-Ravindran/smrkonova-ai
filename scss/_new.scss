@@ -401,6 +401,20 @@
     }
 }
 
+.platform {
+    padding: 8rem 0;
+    background-color: #fff;
+
+    @media #{$xs} {
+        padding: 6rem 0;
+    }
+
+    &__title {
+        margin: 0 0 6rem;
+        text-align: center;
+    }
+}
+
 .choose {
     padding: 8rem 0;
     background-color: #fff;
