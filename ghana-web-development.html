@@ -152,19 +152,19 @@
                   <form method="post" action="./mail.php">
                     <div class="mb-3">
                       <label class="form-label">Full Name</label>
-                      <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+                      <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Email</label>
-                      <input type="email" name="email" class="form-control" placeholder="Enter Your Email">
+                      <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">WhatsApp Number</label>
-                      <input type="text" name="phone" class="form-control" placeholder="Enter Your Number">
+                      <input type="text" name="phone" class="form-control" placeholder="Enter Your Number" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Your Budget Range </label>
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" name="budget" aria-label="Default select example" required>
                         <option selected>Select Your Budget Range</option>
                         <option value="1">GH₵5,000 - GH₵8,000 </option>
                         <option value="2">GH₵11,000 - GH₵16,000 </option>
@@ -173,7 +173,7 @@
                     </div>
                     <div class="mb-3">
                       <label class="form-label">When Can You Start?</label>
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" name="start_time" aria-label="Default select example" required>
                         <option selected>Choose your ideal start time</option>
                         <option value="1">Immediately</option>
                         <option value="2">This Week</option>
