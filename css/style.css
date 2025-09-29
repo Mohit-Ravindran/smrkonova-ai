@@ -5627,6 +5627,44 @@
   margin: 0;
 }
 
+.thank {
+  padding: 10rem 0 4rem;
+}
+.thank img {
+  width: 40rem;
+}
+
+.thank-container {
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: 16px;
+}
+.thank-container h1 {
+  font-size: 4rem;
+  margin-bottom: 12px;
+  color: #000;
+}
+.thank-container p {
+  color: #b9b9b9;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+.thank-container a {
+  background-color: #0073ff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
