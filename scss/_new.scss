@@ -31,7 +31,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     animation: pulse 2s infinite;
 }
 
@@ -133,21 +133,22 @@
         }
 
         a {
-            background-color: $primary;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
             display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             gap: 0.8rem;
             padding: 1.2rem 2.4rem;
             border-radius: 10rem;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 500;
 
-            span {
-                color: $white;
-                font-size: 1.6rem;
-                font-weight: 500;
-            }
-
-            @media #{$xm} {
-                display: none;
+            img {
+                width: 2rem;
             }
         }
     }
@@ -230,6 +231,10 @@
             font-size: 2rem;
             font-weight: 500;
             margin: 0 0 2.4rem;
+
+            @media #{$xs} {
+                font-size: 1.4rem;
+            }
         }
 
 
@@ -750,6 +755,7 @@
         font-weight: 700;
         font-size: 1.4rem;
         box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        white-space: nowrap;
     }
 }
 
@@ -985,6 +991,12 @@
         flex-wrap: wrap;
         gap: 4rem;
         margin: 4rem 0 0;
+
+        @media #{$xs} {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
     }
 
     &__note {
@@ -996,7 +1008,7 @@
 
         p {
             color: #fff;
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 600;
             margin: 0;
 
