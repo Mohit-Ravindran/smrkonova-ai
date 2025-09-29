@@ -25,7 +25,7 @@
             <a href="./ghana-web-development">Home</a>
             <a href="./ghana-web-development#services">Services</a>
             <a href="./ghana-web-development#pricing">Pricing</a>
-            <a href="./ghana-web-development#portfolio">Portfolio</a>
+            <a href="./ghana-web-development#projects">Projects</a>
             <a href="./ghana-web-development#testimonial">Testimonial</a>
           </div>
           <div class="headers__end">
@@ -102,7 +102,7 @@
                 <a href="./ghana-web-development">Home</a>
                 <a href="./ghana-web-development#services">Services</a>
                 <a href="./ghana-web-development#pricing">Pricing</a>
-                <a href="./ghana-web-development#portfolio">Portfolio</a>
+                <a href="./ghana-web-development#projects">Projects</a>
                 <a href="./ghana-web-development#testimonial">Testimonial</a>
               </div>
             </div>
@@ -170,7 +170,7 @@
         <a href="./ghana-web-development">Home</a>
         <a href="./ghana-web-development#services">Services</a>
         <a href="./ghana-web-development#pricing">Pricing</a>
-        <a href="./ghana-web-development#portfolio">Portfolio</a>
+        <a href="./ghana-web-development#projects">Projects</a>
         <a href="./ghana-web-development#testimonial">Testimonial</a>
       </div>
       <div class="menu__btn">
@@ -188,7 +188,28 @@
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <script>
+    document.querySelectorAll('.menu__list a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault(); // stop the default instant jump
 
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+
+        // Close offcanvas
+        const offcanvasEl = document.querySelector('#offcanvasExample');
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+        offcanvas.hide();
+
+        // Wait until offcanvas animation ends, then scroll
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+          }
+        }, { once: true });
+      });
+    });
+  </script>
 
 </body>
 

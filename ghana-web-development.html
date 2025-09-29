@@ -95,7 +95,7 @@
             <a href="./ghana-web-development">Home</a>
             <a href="#services">Services</a>
             <a href="#pricing">Pricing</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
             <a href="#testimonial">Testimonial</a>
           </div>
           <div class="headers__end">
@@ -403,7 +403,7 @@
         </div>
       </div>
     </section>
-    <section class="works" id="portfolio">
+    <section class="works" id="projects">
       <div class="container">
         <div class="works__title">
           <h2 class="sec-title">Our Work Speaks for Itself</h2>
@@ -636,7 +636,7 @@
         <a href="./ghana-web-development">Home</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#projects">Projects</a>
         <a href="#testimonial">Testimonial</a>
       </div>
       <div class="menu__btn">
@@ -674,6 +674,29 @@
       document.body.appendChild(s1);
     })();
   </script>
+  <script>
+    document.querySelectorAll('.menu__list a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault(); // stop the default instant jump
+
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+
+        // Close offcanvas
+        const offcanvasEl = document.querySelector('#offcanvasExample');
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+        offcanvas.hide();
+
+        // Wait until offcanvas animation ends, then scroll
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+          }
+        }, { once: true });
+      });
+    });
+  </script>
+
 </body>
 
 </html>

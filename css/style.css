@@ -4753,6 +4753,11 @@
 .headers__end a img {
   width: 2rem;
 }
+@media (max-width: 991px) {
+  .headers__end a {
+    display: none;
+  }
+}
 
 .banners {
   padding: 8rem 0 8rem;

@@ -150,6 +150,10 @@
             img {
                 width: 2rem;
             }
+
+            @media #{$xm} {
+                display: none;
+            }
         }
     }
 }
