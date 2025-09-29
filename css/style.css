@@ -4868,8 +4868,6 @@
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   border: 3px solid #ffd700;
   padding: 3rem 2rem;
-  -webkit-animation: float 6s ease-in-out infinite;
-          animation: float 6s ease-in-out infinite;
   background-color: #fff;
   max-width: 60%;
   margin: 0 auto;
