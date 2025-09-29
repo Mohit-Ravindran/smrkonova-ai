@@ -4760,12 +4760,17 @@
 }
 
 .banners {
-  background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
   padding: 8rem 0 8rem;
+  background-image: url(../assets/img/ghana/banner.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+@media (max-width: 767px) {
+  .banners {
+    background-image: url(../assets/img/ghana/res-banner.webp);
+  }
 }
 .banners::before {
   position: absolute;
