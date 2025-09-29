@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "ssuryareddy2277@gmail.com"; // 👉 your email
+    $to = "kalyani.smrkonova@gmail.com"; // 👉 your email
     $subject = "Contact Form Ghana";
 
     // Email Body
