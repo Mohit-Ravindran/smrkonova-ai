@@ -114,7 +114,7 @@
     <section class="banners">
       <div class="container">
         <div class="banners__row">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-md-6">
               <div class="banners__content">
                 <div class="banners__badge">
@@ -150,41 +150,48 @@
                 </div>
                 <div class="banners__form">
                   <form method="post" action="./mail.php">
-                    <div class="mb-3">
-                      <label class="form-label">Full Name</label>
-                      <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Name</label>
+                          <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Phone Number</label>
+                          <input type="text" name="phone" class="form-control" placeholder="Enter Your Number" required>
+                        </div>
+                      </div>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Email</label>
                       <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">WhatsApp Number</label>
-                      <input type="text" name="phone" class="form-control" placeholder="Enter Your Number" required>
-                    </div>
+
+
                     <div class="mb-3">
                       <label class="form-label">Your Budget Range </label>
                       <select class="form-select" name="budget" aria-label="Default select example" required>
-                        <option selected>Select Your Budget Range</option>
-                        <option value="1">GH₵5,000 - GH₵8,000 </option>
-                        <option value="2">GH₵11,000 - GH₵16,000 </option>
-                        <option value="3">GH₵18,000 - GH₵25,000</option>
+                        <option selected>GH₵5,000 - GH₵8,000 </option>
+                        <option value="1">GH₵11,000 - GH₵16,000 </option>
+                        <option value="2">GH₵18,000 - GH₵25,000</option>
                       </select>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">When Can You Start?</label>
                       <select class="form-select" name="start_time" aria-label="Default select example" required>
-                        <option selected>Choose your ideal start time</option>
-                        <option value="1">Immediately</option>
-                        <option value="2">This Week</option>
-                        <option value="3">In 1-2 Weeks</option>
+                        <option selected>Immediately</option>
+                        <option value="1">This Week</option>
+                        <option value="2">In 1-2 Weeks</option>
                       </select>
                     </div>
 
                     <div class="mb-3">
-                      <label class="form-label">Tell Us About Your Project</label>
-                      <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="4"
-                        placeholder="What type of website do you need? Any specific features you want?"></textarea>
+                      <label class="form-label">What type of website you want?</label>
+                      <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="1"
+                        placeholder="Enter Here"></textarea>
                     </div>
 
                     <div class="banners__btn">
@@ -206,10 +213,14 @@
     <section class="platform">
       <div class="container">
         <div class="platform__title">
-          <h2 class="sec-title">Smrkonova specializes in professional web Devevelopment</h2>
+          <h2 class="sec-title">Your Trusted Web Development Partner in Ghana</h2>
         </div>
         <div class="platform__video">
-
+          <iframe
+            src="https://www.youtube.com/embed/srT2utY0TnU?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&showinfo=0&playlist=srT2utY0TnU"
+            title="YouTube Shorts video player" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
         </div>
 
       </div>
@@ -217,9 +228,8 @@
     <section class="choose">
       <div class="container">
         <div class="choose__title">
-          <h2 class="sec-title">Why Choose SMRKONOVA? Zero Risk, Maximum Results!</h2>
-          <p class="para-title">We're so confident in our work, we guarantee your satisfaction or work for FREE until
-            you're 100% happy!</p>
+          <h2 class="sec-title">Why Choose Smrkonova? Zero Risk, Maximum Results!</h2>
+          <p class="para-title">We're so confident in our work, we guarantee your satisfaction</p>
         </div>
         <div class="choose__grid">
           <div class="choose__card">
@@ -233,22 +243,22 @@
             <div class="choose__img">
               💰
             </div>
-            <h3>Double Your Sales or FREE</h3>
-            <p>If your new website doesn't increase your sales within 90 days, we'll work for free until it does!</p>
+            <h3>Double Your Sales for Free</h3>
+            <p>your new website will increase your sales within 90 days.</p>
           </div>
           <div class="choose__card">
             <div class="choose__img">
               🛡️
             </div>
             <h3>100% Satisfaction Promise</h3>
-            <p>Love your website or we'll revise it unlimited times at no extra cost!</p>
+            <p>we will make sure you will love your website before making it live</p>
           </div>
           <div class="choose__card">
             <div class="choose__img">
               📱
             </div>
             <h3>Mobile-Perfect Promise</h3>
-            <p>Your website will look perfect on ALL devices or we'll fix it for FREE!</p>
+            <p>your website will look perfect on all the devices it our guarantee</p>
           </div>
         </div>
       </div>
@@ -558,8 +568,7 @@
                   <h4>Contact Info</h4>
                 </div>
                 <div class="footers__list">
-                  <a href="">📞 +233 XX XXX XXXX</a>
-                  <a href="mailto:kalyani.smrkonova@gmail.com">📧 kalyani.smrkonova@gmail.com</a>
+                  <a href="mailto:support@smrkonova.com">📧 support@smrkonova.com</a>
                   <p>📍 Accra, Ghana</p>
                 </div>
                 <div class="footer__social">
