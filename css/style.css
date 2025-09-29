@@ -4576,6 +4576,8 @@
 
 .main-page {
   background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .sec-title {
