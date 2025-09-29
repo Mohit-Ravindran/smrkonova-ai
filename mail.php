@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
     <body>
         <div class='container'>
-            <h2>📩 New Contact Form Submission</h2>
+            <h2>📩 Contact Form Ghana</h2>
             <p><span class='label'>Name:</span> {$name}</p>
             <p><span class='label'>Phone:</span> {$phone}</p>
             <p><span class='label'>Email:</span> {$email}</p>
