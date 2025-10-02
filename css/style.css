@@ -4766,6 +4766,11 @@
   position: relative;
   z-index: 2;
 }
+@media (max-width: 767px) {
+  .banners {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+  }
+}
 .banners::before {
   position: absolute;
   content: "";
@@ -4796,7 +4801,7 @@
 }
 @media (max-width: 767px) {
   .banners__image img:nth-child(2) {
-    display: block;
+    display: none;
   }
 }
 .banners__row {

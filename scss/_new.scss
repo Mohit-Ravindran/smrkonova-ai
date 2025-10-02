@@ -171,9 +171,10 @@
     position: relative;
     z-index: 2;
 
-    // @media #{$xs} {
-    //     background-image: url(../assets/img/ghana/res-banner.webp);
-    // }
+    @media #{$xs} {
+        // background-image: url(../assets/img/ghana/res-banner.webp);
+        background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    }
 
     &::before {
         position: absolute;
@@ -206,7 +207,7 @@
                 display: none;
 
                 @media #{$xs} {
-                    display: block;
+                    display: none;
                 }
             }
         }
