@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "kalyani.smrkonova@gmail.com"; // 👉 your email
+    $to = "ssuryareddy2277@gmail.com"; // 👉 your email
     $subject = "Contact Form Ghana";
 
     // Email Body
@@ -35,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><span class='label'>Name:</span> {$name}</p>
             <p><span class='label'>Phone (with code):</span> {$fullPhone}</p>
             <p><span class='label'>Phone (typed):</span> {$phone}</p>
-            
             <p><span class='label'>Email:</span> {$email}</p>
             <p><span class='label'>Budget Range:</span> {$budget}</p>
             <p><span class='label'>Start Time:</span> {$startTime}</p>
