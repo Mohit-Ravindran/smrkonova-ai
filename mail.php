@@ -2,6 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name      = isset($_POST['name']) ? trim($_POST['name']) : '';
     $phone     = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+    $fullPhone = isset($_POST['full_phone']) ? trim($_POST['full_phone']) : '';
     $email     = isset($_POST['email']) ? trim($_POST['email']) : '';
     $message   = isset($_POST['message']) ? trim($_POST['message']) : '';
     $budget    = isset($_POST['budget']) ? trim($_POST['budget']) : '';
@@ -32,7 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class='container'>
             <h2>📩 Contact Form Ghana</h2>
             <p><span class='label'>Name:</span> {$name}</p>
-            <p><span class='label'>Phone:</span> {$phone}</p>
+            <p><span class='label'>Phone (with code):</span> {$fullPhone}</p>
+            <p><span class='label'>Phone (typed):</span> {$phone}</p>
+            
             <p><span class='label'>Email:</span> {$email}</p>
             <p><span class='label'>Budget Range:</span> {$budget}</p>
             <p><span class='label'>Start Time:</span> {$startTime}</p>
