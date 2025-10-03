@@ -691,15 +691,16 @@
     var iti = input.intlTelInput({
       initialCountry: "gh",
       separateDialCode: true,
-      // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // must be included
     });
 
-    // Before form submit → set full number into hidden input
-    $("form").on("submit", function () {
-      var fullNumber = input.intlTelInput("getNumber"); // e.g. +91 9003045421
+    // Use your specific form ID
+    $("#contactForm").on("submit", function () {
+      var fullNumber = input.intlTelInput("getNumber"); // e.g. +2339003045421
       $("#full_phone").val(fullNumber);
     });
   </script>
+
 
 
 
