@@ -5099,6 +5099,10 @@
   margin: 0 0 6rem;
   text-align: center;
 }
+.platform__img img {
+  border-radius: 1.6rem;
+  cursor: pointer;
+}
 .platform__video {
   text-align: center;
   display: -webkit-box;
@@ -5110,6 +5114,20 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.platform__video .modal-dialog {
+  max-width: 75%;
+  margin: 0 auto;
+  min-height: 56.3rem;
+}
+@media (max-width: 767px) {
+  .platform__video .modal-dialog {
+    max-width: 96%;
+  }
+}
+.platform__video .modal-title {
+  font-size: 2.4rem;
+  color: #000;
 }
 .platform__video lite-youtube {
   width: 100rem;

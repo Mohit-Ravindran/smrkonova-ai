@@ -217,12 +217,32 @@
         <img src="./assets/img/ghana/res-banner.webp" alt="">
       </div>
     </section>
-    <!-- <section class="platform">
+    <section class="platform">
       <div class="container">
         <div class="platform__title">
           <h2 class="sec-title">Your Trusted Web Development Partner in Ghana</h2>
         </div>
         <div class="platform__video">
+          <div class="platform__img" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="./assets/img/ghana/11.png" alt="">
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div id="videoContainer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- <div class="platform__video">
           <iframe
             src="https://www.youtube.com/embed/srT2utY0TnU?controls=1&modestbranding=1&loop=1&playlist=srT2utY0TnU"
             frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -230,10 +250,9 @@
           </iframe>
           <lite-youtube videoid="srT2utY0TnU"
             params="controls=1&modestbranding=1&loop=1&playlist=srT2utY0TnU"></lite-youtube>
-
-        </div>
+        </div> -->
       </div>
-    </section> -->
+    </section>
     <section class="choose">
       <div class="container">
         <div class="choose__title">
@@ -701,7 +720,21 @@
     });
   </script>
 
+  <script>
+    const modal = document.getElementById('exampleModal');
+    const videoContainer = document.getElementById('videoContainer');
+    const videoURL = "https://www.youtube.com/embed/srT2utY0TnU?controls=1&modestbranding=1&loop=1&playlist=srT2utY0TnU";
 
+    modal.addEventListener('shown.bs.modal', () => {
+      videoContainer.innerHTML = `<iframe src="${videoURL}" frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy"></iframe>`;
+    });
+
+    modal.addEventListener('hidden.bs.modal', () => {
+      videoContainer.innerHTML = ""; // remove iframe when modal closed
+    });
+  </script>
 
 
 
