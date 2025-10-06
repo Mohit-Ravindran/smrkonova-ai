@@ -5089,7 +5089,6 @@
 .platform {
   padding: 8rem 0;
   background-color: #fff;
-  display: none;
 }
 @media (max-width: 767px) {
   .platform {
