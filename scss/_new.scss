@@ -1079,11 +1079,7 @@
         gap: 4rem;
         margin: 4rem 0 0;
 
-        @media #{$xs} {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
+
     }
 
     &__note {
