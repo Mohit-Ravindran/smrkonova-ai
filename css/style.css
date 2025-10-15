@@ -3892,6 +3892,11 @@
   font-size: 1.6rem;
   animation: pulse 2s infinite;
 }
+@media (max-width: 767px) {
+  .bar {
+    font-size: 1.4rem;
+  }
+}
 
 @keyframes pulse {
   0%, 100% {

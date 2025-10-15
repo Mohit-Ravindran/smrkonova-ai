@@ -35,6 +35,10 @@
     z-index: 1000;
     font-size: 1.6rem;
     animation: pulse 2s infinite;
+
+    @media #{$xs} {
+        font-size: 1.4rem;
+    }
 }
 
 @keyframes pulse {
